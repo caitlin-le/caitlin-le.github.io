@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caitlin Le</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --coral: #E8614A;
+      --coral-light: #FAEAE7;
+      --coral-mid: #F5B8AC;
+      --teal: #1D9E75;
+      --teal-light: #E1F5EE;
+      --teal-mid: #5DCAA5;
+      --amber: #EF9F27;
+      --amber-light: #FAEEDA;
+      --ink: #1C1C1C;
+      --ink-mid: #4A4A4A;
+      --ink-soft: #767676;
+      --bg: #FFFDF9;
+      --bg-warm: #FFF8F2;
+      --border: #E8E0D6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,253,249,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    nav .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    nav .logo span { color: var(--coral); font-style: italic; }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a {
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: var(--coral); }
+
+    /* ── SECTIONS ── */
+    section { padding: 5rem 2rem; max-width: 860px; margin: 0 auto; }
+    section.full { max-width: 100%; padding: 5rem 0; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 4rem;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    .hero-text h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .hero-text h1 em {
+      color: var(--coral);
+      font-style: italic;
+    }
+    .hero-text p {
+      font-size: 1.05rem;
+      color: var(--ink-mid);
+      margin-bottom: 1.8rem;
+      max-width: 420px;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+    .tag {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+    .tag-coral { background: var(--coral-light); color: #C04030; }
+    .tag-teal  { background: var(--teal-light);  color: #0F6E56; }
+    .tag-amber { background: var(--amber-light); color: #854F0B; }
+    .hero-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0.6rem 1.4rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary { background: var(--coral); color: #fff; }
+    .btn-primary:hover { background: #D04A35; }
+    .btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
+    .btn-outline:hover { border-color: var(--coral); color: var(--coral); }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .avatar-blob {
+      width: 300px;
+      height: 340px;
+      position: relative;
+    }
+    .avatar-blob-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--coral-light);
+      border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+      animation: morph 8s ease-in-out infinite;
+    }
+    @keyframes morph {
+      0%,100% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; }
+      33%      { border-radius: 40% 60% 45% 55% / 60% 40% 60% 40%; }
+      66%      { border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%; }
+    }
+    .avatar-initials {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 5rem;
+      color: var(--coral);
+      letter-spacing: -0.02em;
+      opacity: 0.25;
+    }
+    .avatar-icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      font-size: 1.4rem;
+    }
+    .avatar-icon.bot  { width: 64px; height: 64px; background: #fff; top: 10px; right: -10px; }
+    .avatar-icon.ice  { width: 56px; height: 56px; background: var(--teal-light); bottom: 30px; right: -20px; }
+    .avatar-icon.lab  { width: 52px; height: 52px; background: var(--amber-light); bottom: 60px; left: -15px; }
+
+    /* ── SECTION HEADERS ── */
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      max-width: 500px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .about-grid p { color: var(--ink-mid); margin-bottom: 1rem; }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .stat-card {
+      background: var(--bg-warm);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.2rem;
+    }
+    .stat-card .num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: var(--coral);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-card .label { font-size: 0.82rem; color: var(--ink-soft); }
+
+    /* ── RESEARCH ── */
+    .research-grid { display: grid; gap: 1.25rem; }
+    .research-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.25rem;
+      align-items: start;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .research-card:hover { border-color: var(--coral-mid); transform: translateY(-2px); }
+    .research-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .ri-coral  { background: var(--coral-light); }
+    .ri-teal   { background: var(--teal-light); }
+    .ri-amber  { background: var(--amber-light); }
+    .research-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+    }
+    .research-card p { font-size: 0.9rem; color: var(--ink-mid); margin-bottom: 0.6rem; }
+    .research-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .pill {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 100px;
+      text-decoration: none;
+    }
+    .pill-outline { border: 1px solid var(--border); color: var(--ink-mid); }
+    .pill-outline:hover { border-color: var(--coral); color: var(--coral); }
+
+    /* ── DIVIDER BANNER ── */
+    .banner {
+      background: var(--coral);
+      color: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .banner-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .banner::before, .banner::after {
+      content: '🍦';
+      position: absolute;
+      font-size: 6rem;
+      opacity: 0.12;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .banner::before { left: 4%; }
+    .banner::after  { right: 4%; }
+
+    /* ── ICE CREAM SECTION ── */
+    .icecream-bg {
+      background: var(--bg-warm);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .recipe-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .recipe-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
+    .recipe-thumb {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .recipe-card-body { padding: 1rem 1.25rem 1.25rem; }
+    .recipe-card-body h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .recipe-card-body p { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 0.75rem; }
+    .recipe-meta { display: flex; gap: 0.75rem; font-size: 0.78rem; color: var(--ink-soft); }
+    .recipe-meta span { display: flex; align-items: center; gap: 3px; }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 28, 28, 0.55);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: #fff;
+      border-radius: 24px;
+      max-width: 520px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2rem;
+      position: relative;
+      animation: modalIn 0.25s ease;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.96) translateY(8px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: var(--bg-warm);
+      border: none;
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--ink-mid);
+    }
+    .modal-close:hover { background: var(--coral-light); color: var(--coral); }
+    .modal-thumb { font-size: 3.5rem; margin-bottom: 1rem; }
+    .modal h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.25rem;
+    }
+    .modal .modal-desc { color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .modal h4 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin: 1.25rem 0 0.6rem;
+    }
+    .modal ul, .modal ol {
+      padding-left: 1.25rem;
+      color: var(--ink-mid);
+      font-size: 0.9rem;
+    }
+    .modal li { margin-bottom: 0.4rem; }
+    .modal .modal-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    .modal .note {
+      background: var(--teal-light);
+      border-left: 3px solid var(--teal-mid);
+      border-radius: 0 8px 8px 0;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      color: #0F6E56;
+      margin-top: 1.25rem;
+    }
+
+    /* ── CV ── */
+    .cv-items { display: grid; gap: 0.75rem; }
+    .cv-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .cv-year { font-size: 0.82rem; color: var(--ink-soft); padding-top: 2px; }
+    .cv-title { font-weight: 500; margin-bottom: 2px; }
+    .cv-sub   { font-size: 0.875rem; color: var(--ink-soft); }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--ink-mid);
+      font-size: 0.9rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all 0.2s;
+    }
+    .contact-link:hover { border-color: var(--coral-mid); color: var(--coral); background: var(--coral-light); }
+    .contact-link .icon { font-size: 1.2rem; }
+    .contact-right p { color: var(--ink-mid); margin-bottom: 1rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+    }
+    footer a { color: var(--coral); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .hero          { grid-template-columns: 1fr; min-height: auto; gap: 2rem; }
+      .hero-visual   { display: none; }
+      .about-grid    { grid-template-columns: 1fr; }
+      .contact-grid  { grid-template-columns: 1fr; }
+      .cv-item       { grid-template-columns: 1fr; gap: 0.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">Caitlin <span>Le</span></a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#icecream">Ice Cream</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-tags">
+      <span class="tag tag-coral">PhD Candidate</span>
+      <span class="tag tag-teal">Soft Burrowing Robotics</span>
+      <span class="tag tag-amber">🍦 Ice Cream Maker</span>
+    </div>
+    <h1>Hi, I'm<br /><em>Caitlin Le</em></h1>
+    <p>I build robots that squish, bend, and move like living things — and in my spare time I make ice cream that takes inspiration from the same curiosity about matter and texture.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#research">See my research</a>
+      <a class="btn btn-outline" href="#icecream">🍦 Ice cream lab</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="avatar-blob">
+      <div class="avatar-blob-bg"></div>
+      <img src="headshot.jpg" alt="Caitlin Le" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:60% 40% 55% 45% / 50% 60% 40% 50%;" />
+      <div class="avatar-icon bot">🤖</div>
+      <div class="avatar-icon ice">🍦</div>
+      <div class="avatar-icon lab">🔬</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">About me</p>
+  <h2 class="section-title">Digging deeper into<br />soft robots.</h2>
+  <div class="about-grid">
+    <div>
+      <p>I'm a PhD student researching burrowing robots — designing systems that mimic the compliance, adaptability, and elegance of biological organisms. My work sits at the intersection of materials science, mechanical engineering, and embodied intelligence.</p>
+      <p>When I'm not in the lab, I'm in the kitchen experimenting with fun ice cream flavors: matcha ice cream with red bean paste and butter mochi, corn ice cream with corn bread and honey, hot chocolate ice cream with cinnamon, marshmallows, and peppermint. Food science isn't so different from robot design — both are about understanding how materials behave.</p>
+      <a class="btn btn-outline" href="cv.pdf" style="display:inline-flex; margin-top: 0.5rem;">Download CV ↓</a>
+    </div>
+    <div class="about-stats">
+      <div class="stat-card">f
+        <div class="num">3rd</div>
+        <div class="label">Year of PhD</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">3</div>
+        <div class="label">Publications</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">22+</div>
+        <div class="label">Ice cream recipes</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">∞</div>
+        <div class="label">Curiosity</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <p class="section-label">Research</p>
+  <h2 class="section-title">Burrowing robots.</h2>
+  <p class="section-sub">My work focuses on designing bioinspired soft robotic systems for burrowing in granular media.</p>
+
+  <div class="research-grid">
+    <div class="research-card">
+      <div class="research-icon ri-coral">🦑</div>
+      <div>
+        <h3>Soft Actuator Design</h3>
+        <p>Pneumatically-driven elastomeric actuators that replicate muscle-like motion. Exploring novel geometries for improved force output and energy efficiency.</p>
+        <div class="research-links">
+          <a class="pill pill-outline" href="#">Paper →</a>
+          <a class="pill pill-outline" href="#">GitHub →</a>
+          <span class="tag tag-coral" style="font-size:0.72rem; padding: 2px 10px;">In progress</span>
+        </div>
+      </div>
+    </div>
+    <div class="research-card">
+      <div class="research-icon ri-teal">🧠</div>
+      <div>
+        <h3>Proprioception in Soft Systems</h3>
+        <p>Embedding flexible strain sensors in soft bodies to give robots a "sense" of their own shape — enabling closed-loop control without rigid encoders.</p>
+        <div class="research-links">
+          <a class="pill pill-outline" href="#">Paper →</a>
+          <span class="tag tag-teal" style="font-size:0.72rem; padding: 2px 10px;">Published 2024</span>
+        </div>
+      </div>
+    </div>
+    <div class="research-card">
+      <div class="research-icon ri-amber">🌊</div>
+      <div>
+        <h3>Underwater Locomotion</h3>
+        <p>Designing cephalopod-inspired soft robots for underwater exploration. Partnered with the marine biology department for field testing in open water.</p>
+        <div class="research-links">
+          <a class="pill pill-outline" href="#">Talk slides →</a>
+          <a class="pill pill-outline" href="#">Video →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER BANNER -->
+<div class="banner">
+  <p class="banner-text">"Science is a way of thinking much more than it is a body of knowledge — so is making really good ice cream."</p>
+</div>
+
+<!-- ICE CREAM SECTION -->
+<div class="icecream-bg" id="icecream">
+  <section>
+    <p class="section-label">The Ice Cream Lab</p>
+    <h2 class="section-title">My other kind<br />of experiments.</h2>
+    <p class="section-sub">Click any recipe to see the full method. Updated seasonally.</p>
+
+    <div class="recipe-grid">
+
+      <div class="recipe-card" onclick="openRecipe('matcha')">
+        <div class="recipe-thumb" style="background: #FFF8EE;">🧡</div>
+        <div class="recipe-card-body">
+          <h3>Matcha with red bean paste and butter mochi</h3>
+          <p>A classic matcha flavor, enhanced sweet red bean paste and chewy butter mochi.</p>
+          <div class="recipe-meta">
+            <span>⏱ 2 hrs</span>
+            <!-- <span>🍦 No-churn option</span> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe('corn')">
+        <div class="recipe-thumb" style="background: #F5F0F5;">🖤</div>
+        <div class="recipe-card-body">
+          <h3>Corn with corn bread and honey</h3>
+          <p>Accurate on the corn flavor. Take that how you will.</p>
+          <div class="recipe-meta">
+            <span>⏱ 1 hr</span>
+            <!-- <span>🌱 Vegan option</span> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe('hotchoc')">
+        <div class="recipe-thumb" style="background: #FFFAED;">💛</div>
+        <div class="recipe-card-body">
+          <h3>Hot Chocolate with Cinnamon, Marshmallows, and Peppermint</h3>
+          <p>A flavor for the holidays.</p>
+          <div class="recipe-meta">
+            <span>⏱ 1 hr</span>
+            <span>✨ Showstopper</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- CV / TIMELINE -->
+<section id="cv">
+  <p class="section-label">CV Highlights</p>
+  <h2 class="section-title">The journey so far.</h2>
+  <div class="cv-items">
+    <div class="cv-item">
+      <div class="cv-year">2023 – now</div>
+      <div>
+        <div class="cv-title">PhD, Mechanical Engineering</div>
+        <div class="cv-sub">Yale University · The Faboratory · Advised by Prof. Rebecca Kramer-Bottiglio</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">2021 – 2022</div>
+      <div>
+        <div class="cv-title">Undergraduate Researcher</div>
+        <div class="cv-sub">University of California San Diego · Gravish Lab · Advised by Prof. Nick Gravish & Mike Tolley</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">2019 – 2023</div>
+      <div>
+        <div class="cv-title">B.S. Mechanical and Aerospace Engineering</div>
+        <div class="cv-sub">University of California San Diego · Graduated with honors</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Contact</p>
+  <h2 class="section-title">Let's talk.</h2>
+  <div class="contact-grid">
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:caitlin.le@yale.edu">
+        <span class="icon">✉️</span>
+        <div>
+          <div style="font-weight:500; font-size:0.85rem;">Email</div>
+          <div style="font-size:0.8rem; opacity:0.7;">caitlin.le@yale.edu</div>
+        </div>
+      </a>
+      <a class="contact-link" href="https://scholar.google.com/citations?hl=en&user=5tFYxLcAAAAJ" target="_blank">
+        <span class="icon">🎓</span>
+        <div>
+          <div style="font-weight:500; font-size:0.85rem;">Google Scholar</div>
+          <div style="font-size:0.8rem; opacity:0.7;">Research publications</div>
+        </div>
+      </a>
+      <!-- <a class="contact-link" href="https://github.com/caitlinle" target="_blank">
+        <span class="icon">💻</span>
+        <div>
+          <div style="font-weight:500; font-size:0.85rem;">GitHub</div>
+          <div style="font-size:0.8rem; opacity:0.7;">caitlinle</div>
+        </div>
+      </a> -->
+      <a class="contact-link" href="https://www.linkedin.com/in/caitlin-le/" target="_blank">
+        <span class="icon">🔗</span>
+        <div>
+          <div style="font-weight:500; font-size:0.85rem;">LinkedIn</div>
+          <div style="font-size:0.8rem; opacity:0.7;">Connect with me</div>
+        </div>
+      </a>
+    </div>
+    <div class="contact-right">
+      <p>I'm always happy to chat about soft robotics, potential collaborations, or unusual ice cream flavor ideas. Drop me an email!</p>
+      <p>I'm also available for seminar talks and outreach events.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  Built by Caitlin Le · <a href="https://github.com/clle37/caitlinle.github.io">View source on GitHub</a> · © 2026
+</footer>
+
+<!-- RECIPE MODALS -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal-content"></div>
+</div>
+
+<script>
+const recipes = {
+  miso: {
+    emoji: '🧡',
+    name: 'White Miso Caramel Ice Cream',
+    desc: 'The savory depth of white miso transforms this caramel into something complex and completely addictive.',
+    time: '45 min active · 4 hr chilling',
+    serves: 'Makes ~1 quart',
+    tags: ['No-churn option', 'Crowd favorite'],
+    ingredients: [
+      '2 cups heavy cream',
+      '1 cup whole milk',
+      '¾ cup granulated sugar',
+      '3 tbsp white (shiro) miso paste',
+      '4 large egg yolks',
+      '1 tsp pure vanilla extract',
+      'Flaky sea salt to finish',
+    ],
+    steps: [
+      'Make a dry caramel: heat sugar in a heavy saucepan over medium heat, swirling (not stirring) until deep amber.',
+      'Carefully whisk in cream — it will bubble. Add milk and miso paste, whisking until smooth.',
+      'Whisk egg yolks in a bowl. Temper with the warm caramel mixture, then return everything to the pan.',
+      'Cook over medium-low, stirring constantly, until custard coats a spoon (170–175°F).',
+      'Strain through a fine mesh sieve, stir in vanilla. Chill at least 4 hours or overnight.',
+      'Churn in ice cream machine per manufacturer directions, then freeze 2 hours until firm.',
+      'Scoop and finish with flaky sea salt.',
+    ],
+    note: 'No-churn version: fold into 2 cups whipped cream and freeze 6 hours. Slightly less silky but still delicious.',
+  },
+  sesame: {
+    emoji: '🖤',
+    name: 'Black Sesame Ripple',
+    desc: 'A creamy vanilla custard base swirled with a nutty, almost smoky black sesame paste.',
+    time: '1 hr active · 4 hr chilling',
+    serves: 'Makes ~1 quart',
+    tags: ['Vegan option available', 'Striking appearance'],
+    ingredients: [
+      '2 cups heavy cream (or full-fat coconut cream for vegan)',
+      '1 cup whole milk (or oat milk)',
+      '⅔ cup sugar',
+      '4 egg yolks (or 2 tbsp cornstarch for vegan)',
+      '1 tsp vanilla extract',
+      '½ cup black sesame paste (store-bought or homemade)',
+      '2 tbsp honey or maple syrup',
+    ],
+    steps: [
+      'Make vanilla custard base: heat milk and cream. Whisk yolks and sugar, temper, cook to 175°F. Chill completely.',
+      'Mix sesame paste with honey until smooth and drizzleable. Warm slightly if too thick.',
+      'Churn vanilla base in ice cream machine until soft-serve consistency.',
+      'Layer ice cream and sesame swirl in a loaf pan: ice cream, ribbon of sesame paste, ice cream, repeat.',
+      'Use a butter knife to swirl gently — don\'t overmix or you\'ll lose the ripple.',
+      'Freeze at least 4 hours until firm.',
+    ],
+    note: 'Find black sesame paste at Asian grocery stores. You can also toast and grind your own sesame seeds with a little neutral oil.',
+  },
+  saffron: {
+    emoji: '💛',
+    name: 'Saffron & Cardamom Ice Cream',
+    desc: 'Inspired by Persian bastani — deeply fragrant, golden, and unlike anything you\'ve had from a shop.',
+    time: '50 min active · overnight chilling',
+    serves: 'Makes ~1 quart',
+    tags: ['Showstopper', 'Persian-inspired', 'Freezer-friendly'],
+    ingredients: [
+      '2 cups whole milk',
+      '1½ cups heavy cream',
+      '¾ cup sugar',
+      '5 egg yolks',
+      '½ tsp saffron threads',
+      '1 tsp ground cardamom',
+      '1 tsp rose water',
+      '¼ cup roughly chopped pistachios (to fold in)',
+    ],
+    steps: [
+      'Bloom saffron: steep threads in 2 tbsp warm milk for 15 min. The liquid will turn a vivid gold.',
+      'Heat remaining milk, cream, and saffron mixture over medium until steaming.',
+      'Whisk yolks and sugar until pale. Temper with warm cream, return to pan.',
+      'Stir in cardamom. Cook over medium-low until custard reaches 175°F.',
+      'Remove from heat, stir in rose water. Strain and cool completely (overnight is best).',
+      'Churn until soft-serve, then fold in pistachios. Freeze 4–6 hours.',
+    ],
+    note: 'Rose water varies wildly in strength — start with ½ tsp and taste. The floral note should be present but not soapy.',
+  },
+};
+
+function openRecipe(id) {
+  const r = recipes[id];
+  document.getElementById('modal-content').innerHTML = `
+    <button class="modal-close" onclick="document.getElementById('modal-overlay').classList.remove('open')">✕</button>
+    <div class="modal-thumb">${r.emoji}</div>
+    <h2>${r.name}</h2>
+    <p class="modal-desc">${r.desc}</p>
+    <div class="modal-tags">
+      <span class="tag tag-amber">${r.time}</span>
+      <span class="tag tag-teal">${r.serves}</span>
+      ${r.tags.map(t => `<span class="tag tag-coral">${t}</span>`).join('')}
+    </div>
+    <h4>Ingredients</h4>
+    <ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h4>Method</h4>
+    <ol>${r.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+    <div class="note">💡 ${r.note}</div>
+  `;
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) {
+    document.getElementById('modal-overlay').classList.remove('open');
+  }
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.getElementById('modal-overlay').classList.remove('open');
+});
+</script>
+
+</body>
+</html>
