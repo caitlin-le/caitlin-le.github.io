@@ -285,7 +285,8 @@
       <div class="star s1">✦</div>
       <div class="star s2">✶</div>
       <div class="pop-bg">CL
-        <img src="headshot.jpg" alt="Caitlin Le" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position: center top; border-radius:inherit;"/>      </div>
+        <img src="headshot.jpg" alt="Caitlin Le" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position: center top; border-radius:inherit;" />
+      </div>
       <div class="pop-dot a">🤖</div>
       <div class="pop-dot b">🍦</div>
       <div class="pop-dot c">🔬</div>
@@ -374,18 +375,37 @@
     <h2 class="s-title">My other kind<br />of experiments 🍦</h2>
     <p class="s-sub">Click any recipe to see the full method. Updated seasonally.</p>
     <div class="recipe-grid">
+
       <div class="recipe-card" onclick="openRecipe('matcha')">
         <div class="recipe-thumb" style="background:#EEF8EE;">🍵</div>
-        <div class="recipe-body"><h3>Matcha with Red Bean & Butter Mochi</h3><p>A classic matcha, with sweet red bean paste and chewy butter mochi.</p><div class="recipe-meta"><span>⏱ 2 hrs</span><span>🍦 Crowd Favorite</span></div></div>
+        <div class="recipe-body"><h3>Matcha with Red Bean & Butter Mochi</h3><p>Classic matcha flavor, enhanced with sweet red bean paste and chewy butter mochi.</p><div class="recipe-meta"><span>⏱ 2.5 hrs</span><span>🍦 Lots of Texture</span></div></div>
       </div>
+
       <div class="recipe-card" onclick="openRecipe('corn')">
         <div class="recipe-thumb" style="background:#FFFBE0;">🌽</div>
-        <div class="recipe-body"><h3>Corn with Cornbread & Honey</h3><p>Accurate on the corn flavor. Take that how you will.</p><div class="recipe-meta"><span>⏱ 1 hr</span><span>🧐 Weird</span></div></div>
+        <div class="recipe-body"><h3>Corn with Cornbread & Honey</h3><p>Accurate on the corn flavor. Take that how you will.</p><div class="recipe-meta"><span>⏱ 2.5 hrs</span><span>🧐 Conversation Starter</span></div></div>
       </div>
+
       <div class="recipe-card" onclick="openRecipe('hotchoc')">
         <div class="recipe-thumb" style="background:#F5F0FF;">☕</div>
-        <div class="recipe-body"><h3>Hot Chocolate with Cinnamon & Peppermint</h3><p>A flavor for the holidays.</p><div class="recipe-meta"><span>⏱ 1 hr</span><span>✨ Showstopper</span></div></div>
+        <div class="recipe-body"><h3>Hot Chocolate with Cinnamon & Peppermint Bits</h3><p>A cozy flavor for the holidays.</p><div class="recipe-meta"><span>⏱ 1 hr</span><span>✨ Showstopper</span></div></div>
       </div>
+
+      <div class="recipe-card" onclick="openRecipe('darkchoc')">
+        <div class="recipe-thumb" style="background:#fff9f0;">🍫</div>
+        <div class="recipe-body"><h3>Dark Chocolate</h3><p>Super rich, for the true chocolate lover.</p><div class="recipe-meta"><span>⏱ 1 hr</span><span>🤎 My Favorite</span></div></div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe('mangostickyrice')">
+        <div class="recipe-thumb" style="background:rgb(255, 250, 240);">🥭</div>
+        <div class="recipe-body"><h3>Mango Sticky Rice</h3><p>An ice cream interpretation of a classic dessert.</p><div class="recipe-meta"><span>⏱ 1.5 hr</span><span>🌴 Tropical</span></div></div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe('lemoncurd')">
+        <div class="recipe-thumb" style="background:#FFFBE0;">🍋</div>
+        <div class="recipe-body"><h3>Lemon Curd</h3><p>A bright, tangy summer flavor.</p><div class="recipe-meta"><span>⏱ 2 hrs</span><span>☀️ Summer Flavor</span></div></div>
+      </div>
+
     </div>
   </section>
 </div>
@@ -414,45 +434,31 @@
   <div class="modal" id="modal-content"></div>
 </div>
 
+<!-- recipes.js loads the recipes object; this script handles the modal logic -->
+<script src="recipes.js"></script>
 <script>
-const recipes = {
-  matcha: {
-    emoji: '🍵',
-    name: 'Matcha with Red Bean Paste and Butter Mochi',
-    desc: 'A classic matcha flavor, enhanced with sweet red bean paste and chewy butter mochi.',
-    time: '2 hrs active · overnight chilling',
-    serves: 'Makes ~2 pints',
-    tags: ['Lots of texture', 'Crowd favorite'],
-    ingredients: ['To come!'],
-    steps: ['To come!'],
-    note: '',
-  },
-  corn: {
-    emoji: '🌽',
-    name: 'Corn with Corn Bread and Honey',
-    desc: 'Accurate on the corn flavor. Take that how you will.',
-    time: '1 hr active · overnight chilling',
-    serves: 'Makes ~2 pints',
-    tags: ['Weird', 'Conversation starter'],
-    ingredients: ['To come!'],
-    steps: ['To come!'],
-    note: '',
-  },
-  hotchoc: {
-    emoji: '☕',
-    name: 'Hot Chocolate with Cinnamon, Marshmallows, and Peppermint',
-    desc: 'A flavor for the holidays.',
-    time: '1 hr active · overnight chilling',
-    serves: 'Makes ~2 pints',
-    tags: ['Showstopper', 'Holiday Flavor'],
-    ingredients: ['To come!'],
-    steps: ['To come!'],
-    note: '',
-  },
-};
-
 function openRecipe(id) {
   const r = recipes[id];
+
+  let bodyHTML = '';
+  if (r.sections) {
+    r.sections.forEach(sec => {
+      bodyHTML += `
+        <h4 style="margin-top:1.5rem; font-size:0.85rem; font-weight:700; color:var(--purple); text-transform:uppercase; letter-spacing:0.08em;">${sec.title}</h4>
+        ${sec.ingredients ? `<p style="font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); margin: 0.75rem 0 0.35rem;">Ingredients</p><ul>${sec.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>` : ''}
+        <p style="font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); margin: 0.75rem 0 0.35rem;">Method</p>
+        <ol>${sec.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+      `;
+    });
+  } else {
+    bodyHTML += `
+      <h4>Ingredients</h4>
+      <ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+      <h4>Method</h4>
+      <ol>${r.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+    `;
+  }
+
   document.getElementById('modal-content').innerHTML = `
     <button class="modal-close" onclick="document.getElementById('modal-overlay').classList.remove('open')">✕</button>
     <div class="modal-thumb">${r.emoji}</div>
@@ -463,13 +469,11 @@ function openRecipe(id) {
       <span class="sticker s-sky" style="font-size:0.7rem;box-shadow:none;">${r.serves}</span>
       ${r.tags.map(t => `<span class="sticker s-purple" style="font-size:0.7rem;box-shadow:none;">${t}</span>`).join('')}
     </div>
-    <h4>Ingredients</h4>
-    <ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
-    <h4>Method</h4>
-    <ol>${r.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+    ${bodyHTML}
     ${r.note ? `<div class="note">💡 ${r.note}</div>` : ''}
   `;
   document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('modal-content').scrollTop = 0;
 }
 
 function closeModal(e) {
