@@ -232,7 +232,7 @@ const recipes = {
     desc: 'A refreshing twist on classic lemon ice cream, featuring a tangy lemon curd swirled throughout.',
     time: '2 hr active · overnight chilling',
     serves: 'Makes ~2 pints',
-    tags: ['Summer flavor'],
+    tags: ['Summery'],
     sections: [
       {
         title: 'Lemon Syrup',
@@ -278,6 +278,248 @@ const recipes = {
       },
     ],
     note: "The lemon ice cream came out a bit icier than I'd hoped, probably due to the lemon syrup being a bit watery. Next time, I would do 2.5 cups heavy cream and 0.5 cups whole milk, or even 3 cups heavy cream and no whole milk.",
+  },
+
+  // ── EARL GREY W/ SHORTBREAD ───────────────────────────────────────────
+  earlgrey_shortbread: {
+    emoji: '🩶',
+    name: 'Earl Grey Ice Cream with Shortbread',
+    desc: 'A sophisticated blend of bergamot and buttery shortbread.',
+    time: '2 hr active · overnight chilling',
+    serves: 'Makes ~2 pints',
+    tags: ['Tea'],
+    sections: [
+      {
+        title: 'Earl Grey Ice Cream Base',
+        ingredients: ['10 bags Earl Grey tea', '2.5 cups heavy cream', '1/2 cup whole milk', '2/3 cup sugar', 'pinch of salt', '6 egg yolks', '1 tsp vanilla extract'],
+        steps: [
+          'Cut open the bags of Earl Grey tea and add the tea leaves to a sacepan with the cream and milk. Heat until it just starts to simmer, then remove from heat and let steep for 20 minutes to infuse the tea flavor.',
+          'Strain the tea leaves out and add the sugar and salt to the infused cream mixture. Heat again until the sugar is dissolved and the mixture is hot (but not boiling). I aim for around 150°F.',
+          'In a separate bowl, whisk the egg yolks. Slowly pour some of the hot cream mixture into the yolks while whisking to temper them.',
+          'Pour the tempered yolks back into the saucepan with the rest of the cream mixture. Cook over medium heat, stirring constantly with a wooden spoon or heat-resistant spatula, until the custard thickens enough to coat the back of the spoon (about 170°F). You should also smell the custard.',
+          'Stir in the vanilla extract.',
+          'Remove from heat and strain the custard through a fine-mesh sieve to remove any lumps or bits of cooked egg.',
+          'Chill the custard in the refrigerator for at least 4 hours.',
+        ],
+      },
+      {
+        title: 'Shortbread Pieces',
+        steps: [
+          'I followed this recipe from <a href="https://cooking.nytimes.com/recipes/1013391-shortbread-jammers" target="_blank" style="color:var(--purple); font-weight:600;">NYT Cooking</a>, then cut into small bite-sized pieces.',
+        ],
+      },
+      {
+        title: 'Assembly',
+        ingredients: ['Earl Grey ice cream base', 'Shortbread pieces'],
+        steps: [
+          'Churn the Earl Grey ice cream base in an ice cream maker until it reaches a soft-serve consistency.',
+          'Layer the ice cream and shortbread pieces in a container. Repeat until all components are used up or your container is full.',
+          'Freeze the assembled ice cream overnight.',
+        ],
+      },
+    ],
+    note: "The shortbread was less fluffy and more crumbly than expected. Next time, I would try a different recipe or buy pre-made shortbread and cut it into pieces.",
+  },
+
+
+    // ── STRAWBERRY ───────────────────────────────────────────
+  strawberry: {
+    emoji: '🍓',
+    name: 'Strawberry Ice Cream',
+    desc: 'A classic and refreshing strawberry ice cream.',
+    time: '2 hr active · overnight chilling',
+    serves: 'Makes ~2 pints',
+    tags: ['Fruity'],
+    sections: [
+      {
+        title: 'Strawberry Jam',
+        ingredients: ['1.5 lbs fresh strawberries, hulled and halved', '1/3 cup sugar', '1 tsp lemon juice', 'pinch of salt'],
+        steps: [
+          'In a saucepan, combine the strawberries, sugar, lemon juice, and salt. Cook over medium heat until the strawberries break down and the mixture thickens slightly (about 10-15 minutes).',
+          'Remove from heat and let cool completely before using.',
+        ],
+      },
+      {
+        title: 'Strawberry Puree',
+        ingredients: ['0.5 lbs fresh strawberries, hulled and halved'],
+        steps: [
+          'Blend the strawberries until smooth. I used an immersion blender, but you can also use a regular blender.',
+        ],
+      },
+      {
+        title: 'Strawberry Ice Cream Base',
+        ingredients: ['3 cups heavy cream', '1/3 cup sugar', 'pinch of salt', '6 egg yolks', '1 tsp vanilla extract'],
+        steps: [
+          'Simmer the heavy cream, whole milk, sugar, salt, and lemon zest in a saucepan until the sugar is dissolved and the mixture is hot (but not boiling). I aim for around 150°F.',
+          'In a separate bowl, whisk the egg yolks. Slowly pour some of the hot cream mixture into the yolks while whisking to temper them.',
+          'Pour the tempered yolks back into the saucepan with the rest of the cream mixture. Cook over medium heat, stirring constantly with a wooden spoon or heat-resistant spatula, until the custard thickens enough to coat the back of the spoon (about 170°F). You should also smell the custard.',
+          'Stir in the strawberry jam, strawberry puree, and vanilla extract.',
+          'Remove from heat and strain the custard through a fine-mesh sieve to remove any lumps or bits of cooked egg.',
+          'Chill the custard in the refrigerator for at least 4 hours.',
+        ],
+      },
+      {
+        title: 'Assembly',
+        ingredients: ['Strawberry ice cream base', 'Shortbread pieces'],
+        steps: [
+          'Churn the strawberry ice cream base in an ice cream maker until it reaches a soft-serve consistency.',
+          'Layer the ice cream and shortbread pieces in a container. Repeat until all components are used up or your container is full.',
+          'Freeze the assembled ice cream overnight.',
+        ],
+      },
+    ],
+    note: "I used strawberry puree to brighten the color of the ice cream, but it made it icy. Next time, I would just use all 2 lbs of strawberries for the jam and skip the puree.",
+  },
+
+    // ── STRAWBERRY FROYO───────────────────────────────────────────
+  strawberryfroyo: {
+    emoji: '🍓',
+    name: 'Strawberry Frozen Yogurt',
+    desc: 'A frozen yogurt interpretation of the classic strawberry flavor.',
+    time: '2 hr active · overnight chilling',
+    serves: 'Makes ~2 pints',
+    tags: ['Fruity', 'Tart', 'Blender required'],
+    sections: [
+      {
+        title: 'Strawberry Concentrate',
+        ingredients: ['1 lbs fresh strawberries, hulled and halved', '1/3 cup sugar', '1.5 tsp lemon juice'],
+        steps: [
+          'In a saucepan, combine the strawberries, sugar, and lemon juice. Cook over medium heat until the the volume reduces to 30%.',
+          'Remove from heat and blend. Chill in the fridge.',
+        ],
+      },
+      {
+        title: 'Strawberry Frozen Yogurt Base',
+        ingredients: ['strawberry concentrate', '500 g plain whole milk yogurt', '100 g sugar', 'pinch of salt', '1 tsp vanilla extract', '2 tsp honey'],
+        steps: [
+          'Combine all the ingredients in a bowl and whisk until the sugar is dissolved.',
+          'Chill in the fridge for at least 4 hours before churning.',
+        ],
+      },
+      {
+        title: 'Assembly',
+        ingredients: ['Strawberry ice cream base', 'Shortbread pieces'],
+        steps: [
+          'Churn the strawberry ice cream base in an ice cream maker until it reaches a soft-serve consistency.',
+          'Freeze the assembled ice cream overnight.',
+        ],
+      },
+    ],
+  },
+
+  // ── LYCHEE SORBET ───────────────────────────────────────────
+  lycheesorbet: {
+    emoji: '🍨',
+    name: 'Lychee Sorbet',
+    desc: 'A light and refreshing sorbet that captures the delicate floral sweetness of lychee.',
+    time: '1/2 hr active · overnight chilling',
+    serves: 'Makes ~2 pints',
+    tags: ['Tropical', 'Vegan', 'Dairy-free', 'Egg-free'],
+    sections: [
+      {
+        title: 'Lychee Sorbet Base',
+        ingredients: ['3 cups water', '1.5 cup sugar', 'juice from 1/2 lime', '2 tbsp lychee extract'],
+        steps: [
+          'In a saucepan, combine all the ingredients and heat over medium heat until the sugar is dissolved.',
+          'Remove from heat and chill in the fridge for at least 1 hour.',
+        ],
+      },
+      {
+        title: 'Assembly',
+        ingredients: ['Lychee sorbet base'],
+        steps: [
+          'Churn the lychee sorbet base in an ice cream maker until it reaches slushy consistency.',
+          'Freeze the sorbet overnight.',
+        ],
+      },
+    ],
+    note: 'It was a bit too sweet, so I would reduce the sugar to 1 cup next time.',
+  },
+
+      // ── BUTTER PECAN ───────────────────────────────────────────
+  butterpecan: {
+    emoji: '🥜',
+    name: 'Butter Pecan Ice Cream',
+    desc: 'A rich and creamy ice cream with a hint of buttery sweetness and crunchy pecans.',
+    time: '2 hr active · overnight chilling',
+    serves: 'Makes ~2 pints',
+    tags: ['Nutty'],
+    sections: [
+      {
+        title: 'Brown Butter Pecans',
+        ingredients: ['150 g pecans, halved', '3 tbsp unsalted butter', '50 g light brown sugar', 'pinch of salt'],
+        steps: [
+          'Brown the butter in a skillet over medium heat until it starts to smell nutty and turns a golden brown color.',
+          'Add the pecans, brown sugar, and salt to the skillet. Cook for another 4-5 minutes and stir until coated.',
+          'Spread on parchment paper to cool, then chop into smaller pieces.',
+        ],
+      },
+      {
+        title: 'Brown Butter Ice Cream Base',
+        ingredients: ['2 tbsp unsalted butter', '2 cups heavy cream', '1 cup whole milk', '100 g brown sugar', '40 g sugar', 'pinch of salt', '6 egg yolks', '1 tsp vanilla extract'],
+        steps: [
+          'Brown the butter in a saucepan over medium heat until it starts to smell nutty and turns a golden brown color.',
+          'Simmer the heavy cream, whole milk, sugar, and salt in a saucepan until the sugar is dissolved and the mixture is hot (but not boiling). I aim for around 150°F.',
+          'In a separate bowl, whisk the egg yolks. Slowly pour some of the hot cream mixture into the yolks while whisking to temper them.',
+          'Pour the tempered yolks back into the saucepan with the rest of the cream mixture. Cook over medium heat, stirring constantly with a wooden spoon or heat-resistant spatula, until the custard thickens enough to coat the back of the spoon (about 170°F). You should also smell the custard.',
+          'Stir in the brown butter and vanilla extract.',
+          'Remove from heat and strain the custard through a fine-mesh sieve to remove any lumps or bits of cooked egg.',
+          'Chill the custard in the refrigerator for at least 4 hours.',
+        ],
+      },
+      {
+        title: 'Assembly',
+        ingredients: ['Brown butter ice cream base', 'Brown butter pecans'],
+        steps: [
+          'Churn the brown butter ice cream base in an ice cream maker until it reaches a soft-serve consistency.',
+          'Layer the ice cream and pecan pieces in a container. Repeat until all components are used up or your container is full.',
+          'Freeze the assembled ice cream overnight.',
+        ],
+      },
+    ],
+  },
+
+  // ── ALMOND W/ BLUEBERRY JAM ───────────────────────────────────────────
+  almond_blueberry_jam: {
+    emoji: '🥜🫐',
+    name: 'Almond Ice Cream with Blueberry Jam',
+    desc: 'A creamy almond ice cream swirled with sweet and tangy blueberry jam.',
+    time: '2 hr active · overnight chilling',
+    serves: 'Makes ~2 pints',
+    tags: ['Nutty', 'Fruity'],
+    sections: [
+      {
+        title: 'Blueberry Jam',
+        ingredients: ['300 g fresh blueberries', '140 g sugar', '1 tbsp lemon juice'],
+        steps: [
+          'Let the blueberries macerate with the sugar for 30 minutes to an hour. You\'ll see the blueberries release their juices and create a syrup.',
+          'Simmer the blueberries, sugar, and lemon juice in a saucepan over medium heat until the mixture thickens (about 15-20 minutes).',
+          'It\'s ready when you put a drop of the mixture on a cold plate and it holds its shape.',
+          'Remove from heat and let cool completely before using.',
+        ],
+      },
+      {
+        title: 'Almond Ice Cream Base',
+        ingredients: ['2.5 cups heavy cream', '1/2 cup whole milk', '100 g brown sugar', '40 g sugar', 'pinch of salt', '6 egg yolks', '1 tsp vanilla extract', '1 tsp almond extract'],
+        steps: [
+          'Simmer the heavy cream, whole milk, sugar, and salt in a saucepan until the sugar is dissolved and the mixture is hot (but not boiling). I aim for around 150°F.',
+          'In a separate bowl, whisk the egg yolks. Slowly pour some of the hot cream mixture into the yolks while whisking to temper them.',
+          'Pour the tempered yolks back into the saucepan with the rest of the cream mixture. Cook over medium heat, stirring constantly with a wooden spoon or heat-resistant spatula, until the custard thickens enough to coat the back of the spoon (about 170°F). You should also smell the custard.',
+          'Stir in the vanilla extract and almond extract.',
+          'Remove from heat and strain the custard through a fine-mesh sieve to remove any lumps or bits of cooked egg.',
+          'Chill the custard in the refrigerator for at least 4 hours.',
+        ],
+      },
+      {
+        title: 'Assembly',
+        ingredients: ['Almond ice cream base', 'Blueberry jam'],
+        steps: [
+          'Churn the almond ice cream base in an ice cream maker until it reaches a soft-serve consistency.',
+          'Layer the ice cream and swirl in the blueberry jam in a container. The jam is sweet, so I did about a spoon full in each layer of a pint container. Repeat until all components are used up or your container is full.',
+          'Freeze the assembled ice cream overnight.',
+        ],
+      },
+    ],
   },
 
 };
