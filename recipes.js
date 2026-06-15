@@ -6,7 +6,7 @@ const recipes = {
     name: 'Matcha with Red Bean Paste and Butter Mochi',
     desc: 'Classic matcha flavor, enhanced with sweet red bean paste and chewy butter mochi.',
     time: '2.5 hrs active · overnight chilling',
-    serves: 'Makes ~2 pints',
+    serves: 'Makes 2 pints',
     tags: ['Lots of texture', 'Pressure cooker required', 'Blender required'],
     sections: [
       {
@@ -59,7 +59,7 @@ const recipes = {
     name: 'Corn with Corn Bread and Honey',
     desc: 'Accurate on the corn flavor. Take that how you will.',
     time: '2.5 hr active · overnight chilling',
-    serves: 'Makes ~2-3 pints',
+    serves: 'Makes 2-3 pints',
     tags: ['Conversation starter', 'Blender required'],
     sections: [
       {
@@ -103,7 +103,7 @@ const recipes = {
     name: 'Hot Chocolate with Cinnamon, Marshmallows, and Peppermint Bits',
     desc: 'A flavor for the holidays.',
     time: '1 hr active · overnight chilling',
-    serves: 'Makes ~2 pints',
+    serves: 'Makes 2 pints',
     tags: ['Showstopper', 'Holiday flavor'],
     sections: [
       {
@@ -152,7 +152,7 @@ const recipes = {
     name: 'Dark Chocolate',
     desc: 'Super rich, for the true chocolate lover.',
     time: '1 hr active · overnight chilling',
-    serves: 'Makes ~3 pints',
+    serves: 'Makes 3 pints',
     tags: ['Decadent'],
     ingredients: [
       '3/4 cups heavy cream',
@@ -183,7 +183,7 @@ const recipes = {
     name: 'Mango Sticky Rice Ice Cream',
     desc: 'Inspired by the classic Thai dessert, this ice cream combines the tropical sweetness of mango with the creamy richness of coconut milk and sticky rice.',
     time: '1.5 hr active · overnight chilling',
-    serves: 'Makes ~3 pints',
+    serves: 'Makes 3 pints',
     tags: ['Tropical'],
     sections: [
       {
@@ -231,7 +231,7 @@ const recipes = {
     name: 'Lemon Ice Cream with Lemon Curd',
     desc: 'A refreshing twist on classic lemon ice cream, featuring a tangy lemon curd swirled throughout.',
     time: '2 hr active · overnight chilling',
-    serves: 'Makes ~2 pints',
+    serves: 'Makes 2 pints',
     tags: ['Summery'],
     sections: [
       {
@@ -286,7 +286,7 @@ const recipes = {
     name: 'Earl Grey Ice Cream with Shortbread',
     desc: 'A sophisticated blend of bergamot and buttery shortbread.',
     time: '2 hr active · overnight chilling',
-    serves: 'Makes ~2 pints',
+    serves: 'Makes 2 pints',
     tags: ['Tea'],
     sections: [
       {
@@ -328,7 +328,7 @@ const recipes = {
     name: 'Strawberry Ice Cream',
     desc: 'A classic and refreshing strawberry ice cream.',
     time: '2 hr active · overnight chilling',
-    serves: 'Makes ~2 pints',
+    serves: 'Makes 2 pints',
     tags: ['Fruity'],
     sections: [
       {
@@ -377,7 +377,7 @@ const recipes = {
     name: 'Strawberry Frozen Yogurt',
     desc: 'A frozen yogurt interpretation of the classic strawberry flavor.',
     time: '2 hr active · overnight chilling',
-    serves: 'Makes ~2 pints',
+    serves: 'Makes 2 pints',
     tags: ['Fruity', 'Tart', 'Blender required'],
     sections: [
       {
@@ -413,7 +413,7 @@ const recipes = {
     name: 'Lychee Sorbet',
     desc: 'A light and refreshing sorbet that captures the delicate floral sweetness of lychee.',
     time: '1/2 hr active · overnight chilling',
-    serves: 'Makes ~2 pints',
+    serves: 'Makes 2 pints',
     tags: ['Tropical', 'Vegan', 'Dairy-free', 'Egg-free'],
     sections: [
       {
@@ -442,7 +442,7 @@ const recipes = {
     name: 'Butter Pecan Ice Cream',
     desc: 'A rich and creamy ice cream with a hint of buttery sweetness and crunchy pecans.',
     time: '2 hr active · overnight chilling',
-    serves: 'Makes ~2 pints',
+    serves: 'Makes 2 pints',
     tags: ['Nutty'],
     sections: [
       {
@@ -485,7 +485,7 @@ const recipes = {
     name: 'Almond Ice Cream with Blueberry Jam',
     desc: 'A creamy almond ice cream swirled with sweet and tangy blueberry jam.',
     time: '2 hr active · overnight chilling',
-    serves: 'Makes ~2 pints',
+    serves: 'Makes 2 pints',
     tags: ['Nutty', 'Fruity'],
     sections: [
       {
@@ -520,6 +520,42 @@ const recipes = {
         ],
       },
     ],
+  },
+
+  // ── LOW CAL PANDAN ───────────────────────────────────────
+  low_cal_pandan: {
+    emoji: '🍃',
+    name: 'Low Calorie Pandan Ice Cream',
+    desc: 'A low calorie version of pandan ice cream with no compromise on flavor and texture.',
+    time: '30 min active · overnight chilling',
+    serves: 'Makes 2 pints',
+    tags: ['Low calorie', 'Blender required'],
+    ingredients: [
+      '1 tsp cornstarch',
+      '3.5 cups whole milk',
+      '1/2 cup heavy cream',
+      '1/3 cup sugar',
+      '1 cup allulose',
+      '7 tbsp nonfat dry milk powder',
+      'pinch of salt',
+      '6 egg yolks',
+      '1 tsp vanilla extract',
+      '2 tsp pandan extract',
+      '4 oz reduced-fat cream cheese'
+    ],
+    steps: [
+      'Whisk together the cornstarch with 2 tbsp of the whole milk until smooth. Set aside.',
+      'Simmer the whole milk, heavy cream, and dry milk powder in a saucepan until the sugar is dissolved and the mixture is hot (but not boiling). I aim for around 150°F.',
+      'In a separate bowl, whisk the egg yolks with the sugar, allulose, and salt. Slowly pour some of the hot cream mixture into the yolks while whisking to temper them.',
+      'Pour the tempered yolks back into the saucepan with the rest of the cream mixture and add the cornstarch slurry. Cook over medium heat, stirring constantly with a wooden spoon or heat-resistant spatula, until the custard thickens enough to coat the back of the spoon (about 170°F). You should also smell the custard.',
+      'Stir in the vanilla extract and pandan extract.',
+      'Remove from heat and strain the custard through a fine-mesh sieve to remove any lumps or bits of cooked egg.',
+      'Add the reduced-fat cream cheese to the custard and blend until smooth. I used an immersion blender, but you can also use a regular blender.',
+      'Chill the custard mixture in the refrigerator for at least 4 hours.',
+      'Churn the custard mixture in an ice cream maker until it reaches soft-serve consistency.',
+      'Transfer to a container and freeze the ice cream overnight.'
+    ],
+    note: '220 calories per 1/2 cup serving (or 880 calories for one pint)!',
   },
 
 };
