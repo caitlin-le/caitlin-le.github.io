@@ -553,7 +553,7 @@ const recipes = {
       'Add the reduced-fat cream cheese to the custard and blend until smooth. I used an immersion blender, but you can also use a regular blender.',
       'Chill the custard mixture in the refrigerator for at least 4 hours.',
       'Churn the custard mixture in an ice cream maker until it reaches soft-serve consistency.',
-      'Transfer to a container and freeze the ice cream overnight.'
+      'Transfer to containers and freeze the ice cream overnight.'
     ],
     note: '147 calories per 1/2 cup serving (or 587 calories for one pint)!',
   },
