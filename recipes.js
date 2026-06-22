@@ -528,7 +528,7 @@ const recipes = {
     name: 'Low Calorie Pandan Ice Cream',
     desc: 'A low calorie version of pandan ice cream with no compromise on flavor and texture.',
     time: '30 min active · overnight chilling',
-    serves: 'Makes 2 pints',
+    serves: 'Makes 3 pints',
     tags: ['Low calorie', 'Blender required'],
     ingredients: [
       '1 tsp cornstarch',
@@ -540,7 +540,7 @@ const recipes = {
       'pinch of salt',
       '6 egg yolks',
       '1 tsp vanilla extract',
-      '2 tsp pandan extract',
+      '4 tsp pandan extract',
       '4 oz reduced-fat cream cheese'
     ],
     steps: [
@@ -555,7 +555,7 @@ const recipes = {
       'Churn the custard mixture in an ice cream maker until it reaches soft-serve consistency.',
       'Transfer to a container and freeze the ice cream overnight.'
     ],
-    note: '220 calories per 1/2 cup serving (or 880 calories for one pint)!',
+    note: '147 calories per 1/2 cup serving (or 587 calories for one pint)!',
   },
 
 };
