@@ -304,8 +304,13 @@ const recipes = {
       },
       {
         title: 'Shortbread Pieces',
+        ingredients: ['1/2 stick of softened unsalted butter', '23 g powdered sugar', '1/4 tsp vanilla extract', '53 g all-purpose flour', '11 g cornstarch', 'pinch of salt'],
         steps: [
-          'I followed this recipe from <a href="https://cooking.nytimes.com/recipes/1013391-shortbread-jammers" target="_blank" style="color:var(--purple); font-weight:600;">NYT Cooking</a>, then cut into small bite-sized pieces.',
+          'Beat the butter and powdered sugar together on medium-high speed until light and fluffy. Add the vanilla extract and mix until combined.',
+          'Whisk together the flour, cornstarch, and salt in a separate bowl. Gradually add the dry ingredients to the butter mixture and mix until just combined.',
+          'Turn the dough onto plastic wrap, flatten into a disk, and wrap tightly. Chill in the refrigerator for at least 1 hour.',
+          'Preheat the oven to 325°F. Roll the dough out to about 1/4 inch thick and cut into small bite-sized pieces. Place the pieces on a baking sheet lined with parchment paper.',
+          'Bake for 20-25 minutes, or until the edges are lightly golden. Let cool completely before using.',
         ],
       },
       {
@@ -318,7 +323,7 @@ const recipes = {
         ],
       },
     ],
-    note: "The shortbread was less fluffy and more crumbly than expected. Next time, I would try a different recipe or buy pre-made shortbread and cut it into pieces.",
+    note: "I didn't have a very fine strainer, so I had some bits of tea leaves in my ice cream. The ice cream texture was fine, but if you want a smoother texture, I would recommend using a fine strainer or cheesecloth to strain the tea leaves out.",
   },
 
 
