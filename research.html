@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research · Caitlin Le</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PAGE HEADER ── */
+    .page-hero {
+      max-width: 880px; margin: 0 auto; padding: 4rem 2rem 2rem;
+    }
+
+    /* ── PAPER CARDS ── */
+    .paper-card {
+      background: #fff; border: 2px solid var(--ink); border-radius: 18px;
+      overflow: hidden; box-shadow: 4px 4px 0 var(--ink);
+      transition: all 0.15s; margin-bottom: 2rem;
+    }
+    .paper-card:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--ink); }
+
+    .paper-visual {
+      width: 100%; height: 300px; overflow: hidden;
+      border-bottom: 2px solid var(--ink);
+      background: var(--purple-light); position: relative;
+    }
+    .paper-visual > img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    /* YouTube player fills the visual area */
+    .paper-visual > div { position: absolute; inset: 0; }
+    .paper-visual iframe { position: absolute; inset: 0; width: 100% !important; height: 100% !important; border: 0; }
+
+    /* no-photo visual: icon placeholder */
+    .paper-visual.icon-visual {
+      display: flex; align-items: center; justify-content: center; font-size: 5rem;
+    }
+
+    .paper-body { padding: 1.75rem 2rem 2rem; }
+    .paper-venue {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.5rem;
+    }
+    .paper-card h3 {
+      font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700;
+      line-height: 1.25; margin-bottom: 0.75rem;
+    }
+    .paper-card > .paper-body > p {
+      font-size: 0.92rem; color: var(--ink-mid); margin-bottom: 1.25rem; line-height: 1.65;
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .research-section { max-width: 880px; margin: 0 auto; padding: 0 2rem 4rem; }
+    .research-section + .research-section { padding-top: 0; }
+
+    /* ── NASA BLOCK ── */
+    .nasa-block {
+      background: #fff; border: 2px solid var(--ink); border-radius: 18px;
+      overflow: hidden; box-shadow: 4px 4px 0 var(--ink);
+    }
+    .nasa-photos-row {
+      display: grid; grid-template-columns: 1fr 1fr; height: 300px;
+      border-bottom: 2px solid var(--ink);
+    }
+    .nasa-fig { position: relative; overflow: hidden; margin: 0; }
+    .nasa-fig:first-child { border-right: 2px solid var(--ink); }
+    .nasa-fig img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .nasa-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: rgba(26,21,40,0.78); color: #fff;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.02em;
+      padding: 0.45rem 0.85rem; line-height: 1.4;
+    }
+    .nasa-info { padding: 1.75rem 2rem 2rem; }
+    .nasa-info h3 {
+      font-family: 'Fraunces', serif; font-size: 1.35rem; font-weight: 700;
+      line-height: 1.25; margin-bottom: 0.75rem;
+    }
+    .nasa-info .nasa-award {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.78rem; font-weight: 700; background: var(--yellow);
+      border: 2px solid var(--ink); border-radius: 100px;
+      padding: 3px 14px; box-shadow: 2px 2px 0 var(--ink);
+      margin-bottom: 1rem;
+    }
+    .nasa-info p { font-size: 0.92rem; color: var(--ink-mid); margin-bottom: 0.75rem; line-height: 1.65; }
+    .nasa-info ul { padding-left: 1.25rem; margin-bottom: 0; }
+    .nasa-info li { font-size: 0.92rem; color: var(--ink-mid); margin-bottom: 0.5rem; line-height: 1.55; }
+
+    /* ── BEYOND BURROWING SPACING ── */
+    .section-gap { margin-top: 3rem; }
+
+    @media (max-width: 680px) {
+      .paper-visual { height: 220px; }
+      .nasa-photos-row { grid-template-columns: 1fr; height: auto; }
+      .nasa-fig img { height: 200px; }
+      .nasa-fig:first-child { border-right: none; border-bottom: 2px solid var(--ink); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Caitlin Le ✦</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html" class="active">🤖 Research</a></li>
+    <li><a href="icecream.html">🍦 Ice Cream</a></li>
+    <li><a href="about.html">✨ Beyond the Lab</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-hero">
+  <p class="s-label">Research</p>
+  <h2 class="s-title">Burrowing robots.</h2>
+  <p class="s-sub">Soft robotic systems at the Faboratory, Princeton University, advised by Prof. Rebecca Kramer-Bottiglio.</p>
+</div>
+
+<!-- ── BURROWING ── -->
+<div class="research-section">
+
+  <!-- Grand Challenges -->
+  <article class="paper-card">
+    <div class="paper-visual">
+      <img src="assets/paper%20thumbnails/grand%20challenges%20thumbnail.webp" alt="Grand challenges for burrowing soft robots — diagram showing robot burrowing underground" style="object-fit: cover;">
+    </div>
+    <div class="paper-body">
+      <div class="paper-venue">Journal · Frontiers in Robotics and AI · 2025</div>
+      <h3>Grand Challenges for Burrowing Soft Robots</h3>
+      <p>This review explores the role of soft materials in biological burrowing and their implications for robotic design. We analyze gaps between natural burrowers and soft robotic burrowers, identify grand challenges, and propose opportunities to enhance burrowing performance.</p>
+      <div class="r-links">
+        <a class="pill pill-y" href="https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1525186/full" target="_blank">Paper →</a>
+        <a class="pill" href="https://youtu.be/AtW663xQLug?si=uBds9bRzeY7Wnmxi" target="_blank">Video →</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Common Ground -->
+  <article class="paper-card">
+    <div class="paper-visual">
+      <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;">
+        <source src="assets/paper%20thumbnails/robosoft%202026%20short%20for%20website.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="paper-body">
+      <div class="paper-venue">Conference · IEEE RoboSoft · 2026</div>
+      <h3>Common Ground: Standardizing Granular Media Characteristics for Burrowing Robots</h3>
+      <p>We propose standardized metrics to characterize granular media testbeds. Understanding how soil properties affect soil state — and thus the required burrowing forces — can help identify and evaluate suitable burrowing methods for specific granular environments.</p>
+      <div class="r-links">
+        <a class="pill pill-y" href="https://ieeexplore.ieee.org/document/11522833" target="_blank">Paper →</a>
+        <a class="pill" href="https://www.youtube.com/watch?v=tSGOJQuTO0o" target="_blank">Full video →</a>
+      </div>
+    </div>
+  </article>
+
+</div><!-- /burrowing -->
+
+<!-- ── BEYOND BURROWING ── -->
+<div class="stripe">
+<div class="research-section" style="padding-top: 4rem;">
+  <p class="s-label">Other work</p>
+  <h2 class="s-title">Beyond burrowing.</h2>
+  <p class="s-sub">Other research I've contributed to — spanning reconfigurable materials and soft robotic systems outside my primary thesis work.</p>
+
+  <article class="paper-card">
+    <div class="paper-visual">
+      <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;">
+        <source src="assets/paper%20thumbnails/VS2%20video%20short%20for%20website.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="paper-body">
+      <div class="paper-venue">Conference · IEEE RoboSoft · 2025</div>
+      <h3>Variable Stiffness and Variable Size Particles for Reconfigurable Granular Metamaterials</h3>
+      <p>We introduce variable stiffness and variable size particles to create reconfigurable granular metamaterials with tunable mechanical properties — enabling adaptive structures that can be programmed on the fly.</p>
+      <div class="r-links">
+        <a class="pill pill-y" href="https://ieeexplore.ieee.org/abstract/document/11020817" target="_blank">Paper →</a>
+        <a class="pill" href="https://ieeexplore.ieee.org/ielx8/11020754/11020808/11020817/273.zip?arnumber=11020817" target="_blank">Video →</a>
+      </div>
+    </div>
+  </article>
+
+</div>
+</div><!-- /beyond burrowing -->
+
+<!-- ── NASA FIELD WORK ── -->
+<div class="research-section" style="padding-top: 4rem;">
+  <p class="s-label">Field work</p>
+  <h2 class="s-title">NASA Glenn Research Center.</h2>
+  <p class="s-sub">Two residencies as part of my NASA Space Technology Graduate Research Opportunities fellowship.</p>
+
+  <div class="nasa-block">
+    <div class="nasa-photos-row">
+      <figure class="nasa-fig">
+        <img src="assets/VTE%20glenn%20respirator.jpg"
+             alt="Caitlin in protective gear at the TREC Lab sand bed, NASA Glenn Research Center"
+             style="object-position: center 30%;">
+        <div class="nasa-caption">TREC Lab — regolith simulant sand bed, NASA Glenn (2025)</div>
+      </figure>
+      <figure class="nasa-fig">
+        <img src="assets/VTE%20glenn%20excavation%20sample.jpg"
+             alt="Soft intruder being withdrawn from GRC-3b simulant"
+             style="object-position: 35% 50%;">
+        <!-- Note: this photo is rotated 90°. Open in Windows Photos and click ↻ Rotate to fix. -->
+        <div class="nasa-caption">Excavation Lab — soft intruder in GRC-3b simulant (2026)</div>
+      </figure>
+    </div>
+    <div class="nasa-info">
+      <div class="nasa-award">🚀 NASA NSTGRO Award 80NSSC24K1339</div>
+      <h3>Resource Ingesting Soft Robotic Skins for In Situ Regolith Sampling</h3>
+      <p>Funded by a NASA Space Technology Graduate Research Opportunities Award (2024), my research investigates soft robotic mechanisms for burrowing into and collecting planetary regolith — combining soft robotics with geotechnical principles for space exploration applications.</p>
+      <p>As part of this fellowship, I completed two Visiting Technologist Experience residencies at NASA Glenn Research Center:</p>
+      <ul>
+        <li><strong>May – July 2025 · TREC Lab:</strong> Investigated the effect of intruder softness on intrusion forces in GRC-3 lunar regolith simulant.</li>
+        <li><strong>May – June 2026 · Excavation Lab:</strong> Characterized testbed resetting consistency and studied intruder softness effects in GRC-3b simulant.</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- /nasa -->
+
+<footer>Built by Caitlin Le ✦ <a href="https://github.com/caitlin-le/caitlin-le.github.io">View source</a> · © 2026</footer>
+
+
+</body>
+</html>

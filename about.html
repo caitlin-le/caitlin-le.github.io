@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyond the Lab · Caitlin Le</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── VIETNAM FEATURE ── */
+    .vietnam-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 0;
+    }
+    .viet-card {
+      background: #fff; border: 2px solid var(--ink); border-radius: 18px;
+      overflow: hidden; box-shadow: 4px 4px 0 var(--ink);
+    }
+    .viet-photo {
+      height: 260px; overflow: hidden; border-bottom: 2px solid var(--ink);
+      background: var(--purple-pale);
+      /* Placeholder style — remove when real photos are added */
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 0.75rem;
+    }
+    .viet-photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    /* Placeholder shown only when no <img> is inside */
+    .viet-photo-placeholder {
+      font-size: 3rem; opacity: 0.4;
+    }
+    .viet-photo-placeholder-text {
+      font-size: 0.78rem; font-weight: 600; color: var(--ink-soft);
+      text-align: center; padding: 0 1.5rem; line-height: 1.5;
+    }
+    .viet-body { padding: 1.5rem 1.75rem 1.75rem; }
+    .viet-year {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--mint-light); color: #0D7A62;
+      border: 2px solid var(--ink); border-radius: 100px;
+      padding: 2px 12px; box-shadow: 2px 2px 0 var(--ink); margin-bottom: 0.6rem;
+    }
+    .viet-body h3 {
+      font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700;
+      line-height: 1.25; margin-bottom: 0.5rem;
+    }
+    .viet-body .viet-role {
+      font-size: 0.82rem; font-weight: 600; color: var(--purple); margin-bottom: 0.6rem;
+    }
+    .viet-body p { font-size: 0.88rem; color: var(--ink-mid); line-height: 1.6; }
+
+    /* ── ACTIVITIES GRID ── */
+    .act-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+    .act-card {
+      background: #fff; border: 2px solid var(--ink); border-radius: 14px;
+      padding: 1.25rem 1.4rem; box-shadow: 3px 3px 0 var(--ink);
+      transition: all 0.15s; display: grid; grid-template-columns: 44px 1fr; gap: 0.9rem; align-items: start;
+    }
+    .act-card:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--ink); }
+    .act-icon {
+      width: 44px; height: 44px; border-radius: 10px; border: 2px solid var(--ink);
+      display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .act-icon.ic-p { background: var(--purple-light); }
+    .act-icon.ic-y { background: var(--yellow); }
+    .act-icon.ic-m { background: var(--mint-light); }
+    .act-icon.ic-s { background: var(--sky-light); }
+    .act-years {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.2rem;
+    }
+    .act-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.15rem; line-height: 1.3; }
+    .act-org { font-size: 0.78rem; color: var(--purple); font-weight: 600; margin-bottom: 0.35rem; }
+    .act-desc { font-size: 0.8rem; color: var(--ink-mid); line-height: 1.5; }
+
+    @media (max-width: 680px) {
+      .vietnam-grid { grid-template-columns: 1fr; }
+      .act-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Caitlin Le ✦</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">🤖 Research</a></li>
+    <li><a href="icecream.html">🍦 Ice Cream</a></li>
+    <li><a href="about.html" class="active">✨ Beyond the Lab</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- VIETNAM — featured -->
+<section>
+  <p class="s-label">Service &amp; Outreach</p>
+  <h2 class="s-title">Vietnam service trips.</h2>
+  <p class="s-sub">Two volunteer medical and dental outreach trips to underserved communities in Vietnam.</p>
+
+  <div class="vietnam-grid">
+
+    <!-- 2026 trip — add photo: place an <img> tag inside .viet-photo and remove the placeholder divs -->
+    <div class="viet-card">
+      <div class="viet-photo">
+        <img src="assets/vietnam%202026.JPG" alt="Distributing dental hygiene kits in Gia Lai, Vietnam" style="object-position: center center;">
+      </div>
+      <div class="viet-body">
+        <div class="viet-year">July 2026</div>
+        <h3>Social Assistance Program for Vietnam</h3>
+        <div class="viet-role">Dental Education Assistant · Gia Lai, Vietnam</div>
+        <p>Assembled and distributed 3,000+ dental hygiene kits to underserved communities with limited access to dental care. Taught proper toothbrushing technique and preventive oral hygiene practices to 3,000+ residents, many with no prior dental education.</p>
+      </div>
+    </div>
+
+    <!-- 2023 trip — add photo: place an <img> tag inside .viet-photo and remove the placeholder divs -->
+    <div class="viet-card">
+      <div class="viet-photo">
+        <img src="assets/vietnam%202023.jpg" alt="At the medical lab station in Can Tho, Vietnam" style="object-position: center 30%;">
+      </div>
+      <div class="viet-body">
+        <div class="viet-year">July 2023</div>
+        <h3>Good Samaritans Medical &amp; Dental Ministry</h3>
+        <div class="viet-role">Lab Assistant · Can Tho, Vietnam</div>
+        <p>Conducted blood, lipid, and urinalysis panels for 500+ patients in Can Tho, supporting medical outreach in underserved communities across southern Vietnam.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- OTHER ACTIVITIES -->
+<div class="stripe">
+<section>
+  <p class="s-label">Community &amp; Activities</p>
+  <h2 class="s-title">Other things I do.</h2>
+  <p class="s-sub">Mentorship, space exploration, robotics, and building community in engineering.</p>
+
+  <div class="act-grid">
+
+    <div class="act-card">
+      <div class="act-icon ic-p">🎓</div>
+      <div>
+        <div class="act-years">2024 – 2026</div>
+        <div class="act-title">Project Manager</div>
+        <div class="act-org">Graduate Engineering Community Organization · Yale University</div>
+        <p class="act-desc">Organized community-building events for engineering graduate students, helping create a more connected and supportive academic environment.</p>
+      </div>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon ic-y">🏛️</div>
+      <div>
+        <div class="act-years">2023 – 2026</div>
+        <div class="act-title">Graduate Affiliate</div>
+        <div class="act-org">Silliman College · Yale University</div>
+        <p class="act-desc">Facilitated social events that strengthened graduate–undergraduate interaction and community within the residential college.</p>
+      </div>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon ic-m">👩‍🔬</div>
+      <div>
+        <div class="act-years">2024 – 2025</div>
+        <div class="act-title">Graduate Mentor</div>
+        <div class="act-org">Yale Graduate Society of Women Engineers · Yale University</div>
+        <p class="act-desc">Mentored undergraduate women in engineering on research pathways, graduate school preparation, and navigating academic environments.</p>
+      </div>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon ic-m">✨</div>
+      <div>
+        <div class="act-years">2024 – 2025</div>
+        <div class="act-title">Organizer</div>
+        <div class="act-org">Graduate Women in SEAS Mentorship Program · Yale University</div>
+        <p class="act-desc">Coordinated mentoring events for graduate students and faculty, fostering community and support networks for women in STEM.</p>
+      </div>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon ic-s">🔬</div>
+      <div>
+        <div class="act-years">Sept 2024</div>
+        <div class="act-title">Volunteer</div>
+        <div class="act-org">Girls' Science Investigations · Yale Pathways</div>
+        <p class="act-desc">Taught middle school students about rocket propulsion through hands-on demonstrations, promoting early interest in engineering.</p>
+      </div>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon ic-s">📚</div>
+      <div>
+        <div class="act-years">2020 – 2023</div>
+        <div class="act-title">Lead Peer Educator</div>
+        <div class="act-org">IDEA Engineering Student Center · UC San Diego</div>
+        <p class="act-desc">Taught physics and chemistry to undergraduate engineering students in one-on-one and group settings for three years.</p>
+      </div>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon ic-p">🤖</div>
+      <div>
+        <div class="act-years">2019 – 2023</div>
+        <div class="act-title">Mechanical Subteam Lead &amp; Senior Advisor</div>
+        <div class="act-org">Triton Robotics · UC San Diego</div>
+        <p class="act-desc">Led mechanical design for a RoboMaster competition robot. Oversaw actuator selection, CAD for the claw mechanism, and mentored junior members at STEM outreach events.</p>
+      </div>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon ic-y">🚀</div>
+      <div>
+        <div class="act-years">2021</div>
+        <div class="act-title">Principal Investigator</div>
+        <div class="act-org">NASA L'Space Academy</div>
+        <p class="act-desc">Led a student team designing a soft bioinspired burrowing robot for lunar subsurface exploration. Authored a full mission proposal and submitted a New Technology Report to NASA.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer>Built by Caitlin Le ✦ <a href="https://github.com/caitlin-le/caitlin-le.github.io">View source</a> · © 2026</footer>
+
+</body>
+</html>

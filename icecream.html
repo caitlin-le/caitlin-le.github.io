@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ice Cream Lab · Caitlin Le</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .ic-bg { background: var(--yellow-light); border-top: 2px solid var(--ink); }
+
+    .recipe-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;
+    }
+    .recipe-card {
+      background: #fff; border: 2px solid var(--ink); border-radius: 18px;
+      overflow: hidden; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: all 0.15s;
+    }
+    .recipe-card:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--ink); }
+
+    /* Thumb supports both emoji and real photo */
+    .recipe-thumb {
+      height: 160px; position: relative; overflow: hidden;
+      border-bottom: 2px solid var(--ink);
+      display: flex; align-items: center; justify-content: center; font-size: 3.5rem;
+    }
+    .recipe-thumb img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+    }
+
+    .recipe-body { padding: 1rem 1.25rem 1.25rem; }
+    .recipe-body h3 { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .recipe-body p { font-size: 0.82rem; color: var(--ink-mid); margin-bottom: 0.6rem; }
+    .recipe-meta { display: flex; gap: 0.75rem; font-size: 0.75rem; color: var(--ink-soft); font-weight: 500; }
+
+    .banner {
+      background: var(--purple); border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink);
+      padding: 3.5rem 2rem; text-align: center; position: relative; overflow: hidden;
+    }
+    .banner::before { content: '✦'; position: absolute; font-size: 5rem; opacity: 0.15; left: 5%; top: 50%; transform: translateY(-50%); color: #fff; }
+    .banner::after  { content: '🍦'; position: absolute; font-size: 5rem; opacity: 0.2;  right: 5%; top: 50%; transform: translateY(-50%); }
+    .banner-text { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 2.5vw, 2rem); font-style: italic; font-weight: 700; color: #fff; max-width: 640px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Caitlin Le ✦</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">🤖 Research</a></li>
+    <li><a href="icecream.html" class="active">🍦 Ice Cream</a></li>
+    <li><a href="about.html">✨ Beyond the Lab</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="banner">
+  <p class="banner-text">"Student by day. Ice cream maker by night."</p>
+</div>
+
+<div class="ic-bg">
+  <section>
+    <p class="s-label">The Ice Cream Lab</p>
+    <h2 class="s-title">My other kind<br />of experiments 🍦</h2>
+    <p class="s-sub">Click any recipe to see the full method. Updated seasonally.</p>
+    <div class="recipe-grid">
+
+      <!-- MATCHA — crop photo to open cup (top-right of photo) before using -->
+      <div class="recipe-card" onclick="openRecipe('matcha')">
+        <div class="recipe-thumb" style="background:#EEF8EE;">
+          <img src="assets/ice%20cream/matcha%20with%20red%20bean%20and%20butter%20mochi.jpg"
+               alt="Matcha ice cream" style="object-position: center 60%;">
+        </div>
+        <div class="recipe-body">
+          <h3>Matcha with Red Bean &amp; Butter Mochi</h3>
+          <p>Classic matcha flavor, enhanced with sweet red bean paste and chewy butter mochi.</p>
+          <div class="recipe-meta"><span>⏱ 2.5 hrs</span><span>🍦 Lots of Texture</span></div>
+        </div>
+      </div>
+
+      <!-- CORN — crop photo to open bowl (top-right of photo) before using -->
+      <div class="recipe-card" onclick="openRecipe('corn')">
+        <div class="recipe-thumb" style="background:#FFFBE0;">
+          <img src="assets/ice%20cream/corn%20with%20corn%20bread.jpg"
+               alt="Corn ice cream" style="object-position: center 65%;">
+        </div>
+        <div class="recipe-body">
+          <h3>Corn with Cornbread &amp; Honey</h3>
+          <p>Accurate on the corn flavor. Take that how you will.</p>
+          <div class="recipe-meta"><span>⏱ 2.5 hrs</span><span>🧐 Conversation Starter</span></div>
+        </div>
+      </div>
+
+      <!-- HOT CHOCOLATE -->
+      <div class="recipe-card" onclick="openRecipe('hotchoc')">
+        <div class="recipe-thumb" style="background:#FBF0E6;">
+          <img src="assets/ice%20cream/hot%20chocolate.jpg"
+               alt="Hot chocolate ice cream" style="object-position: center 40%;">
+        </div>
+        <div class="recipe-body">
+          <h3>Hot Chocolate with Toasted Marshmallows &amp; Peppermint</h3>
+          <p>A cozy flavor for the holidays.</p>
+          <div class="recipe-meta"><span>⏱ 1 hr</span><span>✨ Showstopper</span></div>
+        </div>
+      </div>
+
+      <!-- DARK CHOCOLATE — no photo yet -->
+      <div class="recipe-card" onclick="openRecipe('darkchoc')">
+        <div class="recipe-thumb" style="background:#F0E6DA;">🍫</div>
+        <div class="recipe-body">
+          <h3>Dark Chocolate</h3>
+          <p>Super rich, for the true chocolate lover.</p>
+          <div class="recipe-meta"><span>⏱ 1 hr</span><span>🤎 My Favorite</span></div>
+        </div>
+      </div>
+
+      <!-- MANGO STICKY RICE -->
+      <div class="recipe-card" onclick="openRecipe('mangostickyrice')">
+        <div class="recipe-thumb" style="background:#FFF3D0;">
+          <img src="assets/ice%20cream/mango%20sticky%20rice.png"
+               alt="Mango sticky rice ice cream" style="object-position: center 60%;">
+        </div>
+        <div class="recipe-body">
+          <h3>Mango Sticky Rice</h3>
+          <p>An ice cream interpretation of a classic dessert.</p>
+          <div class="recipe-meta"><span>⏱ 1.5 hr</span><span>🌴 Tropical</span></div>
+        </div>
+      </div>
+
+      <!-- LEMON CURD — no photo yet -->
+      <div class="recipe-card" onclick="openRecipe('lemoncurd')">
+        <div class="recipe-thumb" style="background:#FFFBE0;">🍋</div>
+        <div class="recipe-body">
+          <h3>Lemon Curd</h3>
+          <p>A bright, tangy summer flavor.</p>
+          <div class="recipe-meta"><span>⏱ 2 hrs</span><span>☀️ Summer Flavor</span></div>
+        </div>
+      </div>
+
+      <!-- EARL GREY — no photo yet -->
+      <div class="recipe-card" onclick="openRecipe('earlgrey_shortbread')">
+        <div class="recipe-thumb" style="background:#EDEDF5;">🩶</div>
+        <div class="recipe-body">
+          <h3>Earl Grey with Shortbread</h3>
+          <p>A sophisticated blend of bergamot and buttery shortbread.</p>
+          <div class="recipe-meta"><span>⏱ 2 hrs</span><span>🍵 Sophisticated</span></div>
+        </div>
+      </div>
+
+      <!-- STRAWBERRY — no photo yet -->
+      <div class="recipe-card" onclick="openRecipe('strawberry')">
+        <div class="recipe-thumb" style="background:#FFE8EC;">🍓</div>
+        <div class="recipe-body">
+          <h3>Strawberry</h3>
+          <p>A classic and refreshing strawberry ice cream.</p>
+          <div class="recipe-meta"><span>⏱ 2 hrs</span><span>🍓 Fruity</span></div>
+        </div>
+      </div>
+
+      <!-- STRAWBERRY FROYO -->
+      <div class="recipe-card" onclick="openRecipe('strawberryfroyo')">
+        <div class="recipe-thumb" style="background:#FFE8EC;">
+          <img src="assets/ice%20cream/strawberry%20froyo.jpg"
+               alt="Strawberry froyo" style="object-position: 60% 70%;">
+        </div>
+        <div class="recipe-body">
+          <h3>Strawberry Froyo</h3>
+          <p>A frozen yogurt take on the classic strawberry flavor.</p>
+          <div class="recipe-meta"><span>⏱ 2 hrs</span><span>🍦 Tart</span></div>
+        </div>
+      </div>
+
+      <!-- LYCHEE SORBET — no photo yet -->
+      <div class="recipe-card" onclick="openRecipe('lycheesorbet')">
+        <div class="recipe-thumb" style="background:#FFF0F5;">🍨</div>
+        <div class="recipe-body">
+          <h3>Lychee Sorbet</h3>
+          <p>A light, refreshing sorbet that captures the delicate floral sweetness of lychee.</p>
+          <div class="recipe-meta"><span>⏱ 2 hrs</span><span>🌴 Tropical</span></div>
+        </div>
+      </div>
+
+      <!-- BUTTER PECAN — no photo yet -->
+      <div class="recipe-card" onclick="openRecipe('butterpecan')">
+        <div class="recipe-thumb" style="background:#F5EAD4;">🥜</div>
+        <div class="recipe-body">
+          <h3>Butter Pecan</h3>
+          <p>Rich and creamy with a hint of buttery sweetness and crunchy pecans.</p>
+          <div class="recipe-meta"><span>⏱ 2 hrs</span><span>🥜 Nutty</span></div>
+        </div>
+      </div>
+
+      <!-- ALMOND BLUEBERRY JAM -->
+      <div class="recipe-card" onclick="openRecipe('almond_blueberry_jam')">
+        <div class="recipe-thumb" style="background:#EAE5FF;">
+          <img src="assets/ice%20cream/almond%20with%20blueberry%20jam.png"
+               alt="Almond ice cream with blueberry jam" style="object-position: 25% 40%;">
+        </div>
+        <div class="recipe-body">
+          <h3>Almond with Blueberry Lemon Jam</h3>
+          <p>Creamy almond ice cream swirled with sweet-tangy blueberry lemon jam.</p>
+          <div class="recipe-meta"><span>⏱ 2 hrs</span><span>🥜 Nutty</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<footer>Built by Caitlin Le ✦ <a href="https://github.com/caitlin-le/caitlin-le.github.io">View source</a> · © 2026</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal-content"></div>
+</div>
+
+<script src="recipes.js"></script>
+<script>
+function openRecipe(id) {
+  const r = recipes[id];
+  let bodyHTML = '';
+  if (r.sections) {
+    r.sections.forEach(sec => {
+      bodyHTML += `
+        <h4 style="margin-top:1.5rem;font-size:0.85rem;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:0.08em;">${sec.title}</h4>
+        ${sec.ingredients ? `<p style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);margin:0.75rem 0 0.35rem;">Ingredients</p><ul>${sec.ingredients.map(i=>`<li>${i}</li>`).join('')}</ul>` : ''}
+        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);margin:0.75rem 0 0.35rem;">Method</p>
+        <ol>${sec.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+      `;
+    });
+  } else {
+    bodyHTML = `
+      <h4>Ingredients</h4>
+      <ul>${r.ingredients.map(i=>`<li>${i}</li>`).join('')}</ul>
+      <h4>Method</h4>
+      <ol>${r.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+    `;
+  }
+  document.getElementById('modal-content').innerHTML = `
+    <button class="modal-close" onclick="document.getElementById('modal-overlay').classList.remove('open')">✕</button>
+    <div class="modal-thumb">${r.emoji}</div>
+    <h2>${r.name}</h2>
+    <p class="modal-desc">${r.desc}</p>
+    <div class="modal-tags">
+      <span class="sticker s-yellow" style="font-size:0.7rem;box-shadow:none;">${r.time}</span>
+      <span class="sticker s-sky"    style="font-size:0.7rem;box-shadow:none;">${r.serves}</span>
+      ${r.tags.map(t=>`<span class="sticker s-purple" style="font-size:0.7rem;box-shadow:none;">${t}</span>`).join('')}
+    </div>
+    ${bodyHTML}
+    ${r.note ? `<div class="note">💡 ${r.note}</div>` : ''}
+  `;
+  document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('modal-content').scrollTop = 0;
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay'))
+    document.getElementById('modal-overlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.getElementById('modal-overlay').classList.remove('open');
+});
+</script>
+
+</body>
+</html>
