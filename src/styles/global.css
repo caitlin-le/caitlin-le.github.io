@@ -573,6 +573,9 @@ p { line-height: 1.65; color: var(--ink-mid); }
   border-radius: var(--radius-lg);
   text-align: center;
   transition: border-color 0.2s, transform 0.2s;
+  font-family: var(--font);
+  width: 100%;
+  cursor: pointer;
 }
 .contact-card:hover {
   border-color: var(--navy);
