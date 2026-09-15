@@ -1,0 +1,42 @@
+{
+  "id": "butterpecan",
+  "emoji": "🥜",
+  "name": "Butter Pecan Ice Cream",
+  "desc": "A rich and creamy ice cream with a hint of buttery sweetness and crunchy pecans.",
+  "time": "2 hr active · overnight chilling",
+  "serves": "Makes 2 pints",
+  "tags": ["Nutty"],
+  "sections": [
+    {
+      "title": "Brown Butter Pecans",
+      "ingredients": ["150 g pecans, halved", "3 tbsp unsalted butter", "50 g light brown sugar", "pinch of salt"],
+      "steps": [
+        "Brown the butter in a skillet over medium heat until it starts to smell nutty and turns a golden brown color.",
+        "Add the pecans, brown sugar, and salt to the skillet. Cook for another 4-5 minutes and stir until coated.",
+        "Spread on parchment paper to cool, then chop into smaller pieces."
+      ]
+    },
+    {
+      "title": "Brown Butter Ice Cream Base",
+      "ingredients": ["2 tbsp unsalted butter", "2 cups heavy cream", "1 cup whole milk", "100 g brown sugar", "40 g sugar", "pinch of salt", "6 egg yolks", "1 tsp vanilla extract"],
+      "steps": [
+        "Brown the butter in a saucepan over medium heat until it starts to smell nutty and turns golden brown.",
+        "Simmer the heavy cream, whole milk, sugar, and salt until the sugar is dissolved and the mixture is hot (but not boiling). I aim for around 150°F.",
+        "In a separate bowl, whisk the egg yolks. Slowly pour some of the hot cream mixture into the yolks while whisking to temper them.",
+        "Pour the tempered yolks back into the saucepan. Cook over medium heat, stirring constantly, until the custard thickens (about 170°F).",
+        "Stir in the brown butter and vanilla extract.",
+        "Remove from heat and strain through a fine-mesh sieve.",
+        "Chill in the refrigerator for at least 4 hours."
+      ]
+    },
+    {
+      "title": "Assembly",
+      "ingredients": ["Brown butter ice cream base", "Brown butter pecans"],
+      "steps": [
+        "Churn the brown butter ice cream base in an ice cream maker until it reaches a soft-serve consistency.",
+        "Layer the ice cream and pecan pieces in a container. Repeat until all components are used up.",
+        "Freeze the assembled ice cream overnight."
+      ]
+    }
+  ]
+}

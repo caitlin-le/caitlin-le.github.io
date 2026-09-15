@@ -1,2 +1,11 @@
 index-v1.html
 index-v2.html
+
+# Astro
+dist/
+node_modules/
+.astro/
+
+# OS
+.DS_Store
+Thumbs.db

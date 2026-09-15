@@ -1,0 +1,172 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="About"
+  description="About Caitlin Le — PhD candidate, roboticist, and volunteer."
+>
+
+<!-- ── Vietnam ────────────────────────────────────── -->
+<section class="section-pad">
+  <div class="page-wrap">
+    <p class="eyebrow" style="margin-bottom:0.5rem">Service &amp; Outreach</p>
+    <h2 style="margin-bottom:0.5rem">Vietnam Service Trips</h2>
+    <p style="max-width:56ch;margin-bottom:2.5rem;color:var(--ink-mid)">
+      Two volunteer medical and dental outreach trips to underserved communities in Vietnam.
+    </p>
+
+    <div class="vietnam-grid" style="margin-bottom:0">
+      <div class="viet-card">
+        <div class="vietnam-photo">
+          <img src="/assets/vietnam 2026.JPG" alt="Distributing dental hygiene kits in Gia Lai, Vietnam" loading="lazy" style="object-position:center center" />
+        </div>
+        <div class="viet-body">
+          <span class="viet-year-badge">July 2026</span>
+          <h3>Social Assistance Program for Vietnam</h3>
+          <div class="viet-role">Dental Education Assistant · Gia Lai, Vietnam</div>
+          <p>Assembled and distributed 3,000+ dental hygiene kits to underserved communities. Taught proper toothbrushing technique and preventive oral hygiene to 3,000+ residents, many with no prior dental education.</p>
+        </div>
+      </div>
+
+      <div class="viet-card">
+        <div class="vietnam-photo">
+          <img src="/assets/vietnam 2023.jpg" alt="At the medical lab station in Can Tho, Vietnam" loading="lazy" style="object-position:center 30%" />
+        </div>
+        <div class="viet-body">
+          <span class="viet-year-badge">July 2023</span>
+          <h3>Good Samaritans Medical &amp; Dental Ministry</h3>
+          <div class="viet-role">Lab Assistant · Can Tho, Vietnam</div>
+          <p>Conducted blood, lipid, and urinalysis panels for 500+ patients in Can Tho, supporting medical outreach in underserved communities across southern Vietnam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Activities ─────────────────────────────────── -->
+<section class="section-pad" style="background:var(--surface)">
+  <div class="page-wrap">
+    <p class="eyebrow" style="margin-bottom:0.5rem">Community &amp; Activities</p>
+    <h2 style="margin-bottom:0.5rem">Other Things I Do</h2>
+    <p style="max-width:56ch;margin-bottom:2rem;color:var(--ink-mid)">
+      Mentorship, space exploration, robotics, and building community in engineering.
+    </p>
+
+    <div class="activity-grid">
+      <div class="activity-card">
+        <div class="activity-card-title">🎓 Project Manager</div>
+        <div class="activity-card-meta">2024–2026 · Graduate Engineering Community Organization · Yale University</div>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:0.35rem;line-height:1.5">Organized community-building events for engineering graduate students.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-title">🏛️ Graduate Affiliate</div>
+        <div class="activity-card-meta">2023–2026 · Silliman College · Yale University</div>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:0.35rem;line-height:1.5">Facilitated events strengthening graduate–undergraduate community within the residential college.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-title">👩‍🔬 Graduate Mentor</div>
+        <div class="activity-card-meta">2024–2025 · Yale Graduate Society of Women Engineers</div>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:0.35rem;line-height:1.5">Mentored undergraduate women on research pathways and graduate school preparation.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-title">✨ Organizer</div>
+        <div class="activity-card-meta">2024–2025 · Graduate Women in SEAS Mentorship Program · Yale University</div>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:0.35rem;line-height:1.5">Coordinated mentoring events for graduate students and faculty, fostering support networks for women in STEM.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-title">🔬 Volunteer</div>
+        <div class="activity-card-meta">Sept 2024 · Girls' Science Investigations · Yale Pathways</div>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:0.35rem;line-height:1.5">Taught middle school students about rocket propulsion through hands-on demonstrations.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-title">📚 Lead Peer Educator</div>
+        <div class="activity-card-meta">2020–2023 · IDEA Engineering Student Center · UC San Diego</div>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:0.35rem;line-height:1.5">Taught physics and chemistry to undergraduate engineering students for three years.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-title">🤖 Mechanical Subteam Lead &amp; Senior Advisor</div>
+        <div class="activity-card-meta">2019–2023 · Triton Robotics · UC San Diego</div>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:0.35rem;line-height:1.5">Led mechanical design for a RoboMaster competition robot, overseeing actuator selection and CAD.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-title">🚀 Principal Investigator</div>
+        <div class="activity-card-meta">2021 · NASA L'Space Academy</div>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:0.35rem;line-height:1.5">Led a student team designing a soft bioinspired burrowing robot for lunar subsurface exploration. Authored a full mission proposal and submitted a New Technology Report to NASA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</Base>
+
+<style>
+.vietnam-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.viet-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.viet-card .vietnam-photo {
+  height: 260px;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.viet-body {
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+
+.viet-year-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--navy-light);
+  color: var(--navy);
+  border-radius: 100px;
+  padding: 3px 12px;
+  margin-bottom: 0.65rem;
+}
+
+.viet-body h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+  color: var(--ink);
+}
+
+.viet-role {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.viet-body p {
+  font-size: 0.85rem;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+  .vietnam-grid { grid-template-columns: 1fr; }
+}
+</style>

@@ -1,0 +1,54 @@
+{
+  "id": "lemoncurd",
+  "emoji": "🍋",
+  "name": "Lemon Ice Cream with Lemon Curd",
+  "desc": "A refreshing twist on classic lemon ice cream, featuring a tangy lemon curd swirled throughout.",
+  "time": "2 hr active · overnight chilling",
+  "serves": "Makes 2 pints",
+  "tags": ["Summery"],
+  "note": "The lemon ice cream came out a bit icier than I'd hoped, probably due to the lemon syrup being a bit watery. Next time, I would do 2.5 cups heavy cream and 0.5 cups whole milk, or even 3 cups heavy cream and no whole milk.",
+  "sections": [
+    {
+      "title": "Lemon Syrup",
+      "ingredients": ["1/2 cup lemon juice (2-3 lemons)", "1/4 cup sugar"],
+      "steps": [
+        "In a saucepan, combine the lemon juice and sugar and cook over medium heat until the sugar is dissolved and the mixture thickens slightly (about 5-7 minutes).",
+        "Chill in the fridge."
+      ]
+    },
+    {
+      "title": "Lemon Ice Cream Base",
+      "ingredients": ["2 cups heavy cream", "1 cup whole milk", "2/3 cup sugar", "pinch of salt", "zest of 2 lemons", "6 egg yolks", "1 tsp vanilla extract"],
+      "steps": [
+        "Simmer the heavy cream, whole milk, sugar, salt, and lemon zest in a saucepan until the sugar is dissolved and the mixture is hot (but not boiling). I aim for around 150°F.",
+        "Remove from heat, cover, and let steep for 10-15 minutes.",
+        "Reheat the mixture until it just starts to simmer again.",
+        "In a separate bowl, whisk the egg yolks. Slowly pour some of the hot cream mixture into the yolks while whisking to temper them.",
+        "Pour the tempered yolks back into the saucepan. Cook over medium heat, stirring constantly, until the custard thickens enough to coat the back of the spoon (about 170°F).",
+        "Stir in the vanilla extract.",
+        "Remove from heat and strain through a fine-mesh sieve.",
+        "Chill in the refrigerator for at least 4 hours."
+      ]
+    },
+    {
+      "title": "Lemon Curd",
+      "ingredients": ["3 large egg yolks", "1 large whole egg", "1/2 cup sugar", "1/2 cup lemon juice (about 2-3 lemons)", "zest of 1 lemon", "pinch of salt", "4 tbsp unsalted butter, cut into small pieces"],
+      "steps": [
+        "Combine everything except the butter in a saucepan and cook over low heat. Stir constantly for 5-8 minutes until the mixture thickens and coats the back of a spoon. I aimed for 170°F.",
+        "Remove from heat and stir in the butter pieces until fully incorporated.",
+        "Strain through a fine-mesh sieve into a bowl. Press plastic wrap directly onto the surface.",
+        "Chill in the fridge until ready to use."
+      ]
+    },
+    {
+      "title": "Assembly",
+      "ingredients": ["Lemon ice cream base", "Lemon syrup", "Lemon curd"],
+      "steps": [
+        "Mix the lemon syrup into the lemon ice cream base.",
+        "Churn the lemon ice cream base in an ice cream maker until it reaches a soft-serve consistency.",
+        "Layer the ice cream and swirl in lemon curd in a container. Repeat until all components are used up.",
+        "Freeze the assembled ice cream overnight."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "J1",
+  "title": "Grand Challenges for Burrowing Soft Robots",
+  "venue": "Frontiers in Robotics and AI",
+  "year": 2025,
+  "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1525186/full",
+  "thumbnail": "/assets/paper thumbnails/grand challenges thumbnail.webp",
+  "authors": "Caitlin Le, et al.",
+  "abstract": "A survey and roadmap of grand challenges facing the field of burrowing soft robotics, covering locomotion, sensing, and materials.",
+  "tags": ["survey", "burrowing", "soft robotics"]
+}

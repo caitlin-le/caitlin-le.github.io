@@ -1,0 +1,46 @@
+{
+  "id": "strawberry",
+  "emoji": "🍓",
+  "name": "Strawberry Ice Cream",
+  "desc": "A classic and refreshing strawberry ice cream.",
+  "time": "2 hr active · overnight chilling",
+  "serves": "Makes 2 pints",
+  "tags": ["Fruity"],
+  "note": "I used strawberry puree to brighten the color of the ice cream, but it made it icy. Next time, I would just use all 2 lbs of strawberries for the jam and skip the puree.",
+  "sections": [
+    {
+      "title": "Strawberry Jam",
+      "ingredients": ["1.5 lbs fresh strawberries, hulled and halved", "1/3 cup sugar", "1 tsp lemon juice", "pinch of salt"],
+      "steps": [
+        "In a saucepan, combine the strawberries, sugar, lemon juice, and salt. Cook over medium heat until the strawberries break down and the mixture thickens slightly (about 10-15 minutes).",
+        "Remove from heat and let cool completely before using."
+      ]
+    },
+    {
+      "title": "Strawberry Puree",
+      "ingredients": ["0.5 lbs fresh strawberries, hulled and halved"],
+      "steps": [
+        "Blend the strawberries until smooth."
+      ]
+    },
+    {
+      "title": "Strawberry Ice Cream Base",
+      "ingredients": ["3 cups heavy cream", "1/3 cup sugar", "pinch of salt", "6 egg yolks", "1 tsp vanilla extract"],
+      "steps": [
+        "Simmer the heavy cream, sugar, and salt in a saucepan until the sugar is dissolved and the mixture is hot (but not boiling). I aim for around 150°F.",
+        "In a separate bowl, whisk the egg yolks. Slowly pour some of the hot cream mixture into the yolks while whisking to temper them.",
+        "Pour the tempered yolks back into the saucepan. Cook over medium heat, stirring constantly, until the custard thickens (about 170°F).",
+        "Stir in the strawberry jam, strawberry puree, and vanilla extract.",
+        "Remove from heat and strain through a fine-mesh sieve.",
+        "Chill in the refrigerator for at least 4 hours."
+      ]
+    },
+    {
+      "title": "Assembly",
+      "steps": [
+        "Churn the strawberry ice cream base in an ice cream maker until it reaches a soft-serve consistency.",
+        "Transfer to containers and freeze overnight."
+      ]
+    }
+  ]
+}

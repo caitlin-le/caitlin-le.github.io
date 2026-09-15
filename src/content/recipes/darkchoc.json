@@ -1,0 +1,30 @@
+{
+  "id": "darkchoc",
+  "emoji": "🍫",
+  "name": "Dark Chocolate",
+  "desc": "Super rich, for the true chocolate lover.",
+  "time": "1 hr active · overnight chilling",
+  "serves": "Makes 3 pints",
+  "tags": ["Decadent"],
+  "note": "Depending on the crowd, I sometimes add a handful or two of semi-sweet chocolate chips to melt with the dark chocolate base to make the flavor less intense.",
+  "ingredients": [
+    "3/4 cups heavy cream",
+    "3 tbsp cocoa powder",
+    "10 oz dark chocolate chips",
+    "1.5 cups whole milk",
+    "2/3 cup sugar",
+    "pinch of salt",
+    "6 egg yolks",
+    "3/4 cups creme fraiche",
+    "1 tsp vanilla extract"
+  ],
+  "steps": [
+    "Simmer the cream and cocoa powder in a saucepan until it just starts to simmer. Remove from heat, add the chocolate chips, and whisk until smooth.",
+    "In a separate saucepan, heat the milk, sugar, and salt until the sugar is dissolved and the mixture is hot (but not boiling). I aim for around 150°F.",
+    "In a separate bowl, whisk the egg yolks. Slowly pour some of the hot milk mixture into the yolks while whisking to temper them.",
+    "Pour the tempered yolks back into the saucepan with the rest of the milk mixture. Cook over medium heat, stirring constantly, until the custard thickens enough to coat the back of the spoon (about 170°F).",
+    "Stir in the chocolate mixture, creme fraiche, and vanilla extract.",
+    "Remove from heat and strain through a fine-mesh sieve.",
+    "Chill in the refrigerator for at least 4 hours before churning. Freeze overnight after churning."
+  ]
+}

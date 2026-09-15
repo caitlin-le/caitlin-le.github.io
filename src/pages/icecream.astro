@@ -1,0 +1,132 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const recipes = await getCollection('recipes');
+---
+
+<Base
+  title="Ice Cream Kitchen"
+  description="13 original ice cream recipes by Caitlin Le. Matcha, corn, hot chocolate, and more."
+>
+
+<section class="section-pad">
+  <div class="page-wrap">
+    <p class="eyebrow" style="margin-bottom:0.5rem">The Kitchen</p>
+    <h2 style="margin-bottom:0.5rem">Ice Cream Recipes</h2>
+    <p style="max-width:52ch;margin-bottom:2.5rem;color:var(--ink-mid)">
+      {recipes.length} original flavors. Click any card for the full recipe.
+    </p>
+
+    <div class="recipe-grid">
+      {recipes.map(recipe => (
+        <button
+          class="recipe-card"
+          data-recipe-id={recipe.data.id}
+          aria-label={`Open recipe for ${recipe.data.name}`}
+        >
+          {recipe.data.image ? (
+            <img class="recipe-img" src={recipe.data.image} alt={recipe.data.name} loading="lazy" />
+          ) : (
+            <div class="recipe-img-placeholder">
+              <span>{recipe.data.emoji}</span>
+            </div>
+          )}
+          <div class="recipe-card-body">
+            <div class="recipe-card-name">{recipe.data.emoji} {recipe.data.name}</div>
+            <div class="recipe-card-desc">{recipe.data.desc}</div>
+            {recipe.data.tags && recipe.data.tags.length > 0 && (
+              <div class="recipe-tags">
+                {recipe.data.tags.slice(0, 3).map(tag => (
+                  <span class="recipe-tag">{tag}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        </button>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ── Modal ──────────────────────────────────────── -->
+<div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-label="Recipe details">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+    <div class="modal-content" id="modal-content">
+      <!-- injected by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- Recipe data embedded for client-side rendering -->
+<script define:vars={{ recipes: recipes.map(r => r.data) }}>
+  const backdrop = document.getElementById('modal-backdrop');
+  const modalContent = document.getElementById('modal-content');
+  const closeBtn = document.getElementById('modal-close');
+
+  function renderSection(section) {
+    let html = `<div class="recipe-section">
+      <div class="recipe-section-title">${section.title}</div>`;
+    if (section.ingredients?.length) {
+      html += `<ul class="ingredient-list">
+        ${section.ingredients.map(i => `<li>${i}</li>`).join('')}
+      </ul>`;
+    }
+    if (section.steps?.length) {
+      html += `<ol class="step-list">
+        ${section.steps.map(s => `<li>${s}</li>`).join('')}
+      </ol>`;
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function openRecipe(id) {
+    const recipe = recipes.find(r => r.id === id);
+    if (!recipe) return;
+
+    let body = `<div class="modal-header">
+      <div class="modal-title">${recipe.emoji} ${recipe.name}</div>
+      <div class="modal-meta">${recipe.time} · ${recipe.serves}</div>
+      ${recipe.tags?.length ? `<div class="recipe-tags" style="margin-top:0.5rem">${recipe.tags.map(t => `<span class="recipe-tag">${t}</span>`).join('')}</div>` : ''}
+    </div>`;
+
+    if (recipe.sections?.length) {
+      recipe.sections.forEach(s => { body += renderSection(s); });
+    } else if (recipe.ingredients || recipe.steps) {
+      body += renderSection({ title: 'Instructions', ingredients: recipe.ingredients, steps: recipe.steps });
+    }
+
+    if (recipe.note) {
+      body += `<div class="recipe-note">${recipe.note}</div>`;
+    }
+
+    modalContent.innerHTML = body;
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.recipe-card').forEach(card => {
+    card.addEventListener('click', () => openRecipe(card.dataset.recipeId));
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+<style>
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+</style>
+
+</Base>

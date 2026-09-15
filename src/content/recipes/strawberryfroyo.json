@@ -1,0 +1,35 @@
+{
+  "id": "strawberryfroyo",
+  "emoji": "🍓",
+  "name": "Strawberry Frozen Yogurt",
+  "desc": "A frozen yogurt interpretation of the classic strawberry flavor.",
+  "time": "2 hr active · overnight chilling",
+  "serves": "Makes 2 pints",
+  "tags": ["Fruity", "Tart", "Blender required"],
+  "image": "/assets/ice cream/strawberry froyo.jpg",
+  "sections": [
+    {
+      "title": "Strawberry Concentrate",
+      "ingredients": ["1 lbs fresh strawberries, hulled and halved", "1/3 cup sugar", "1.5 tsp lemon juice"],
+      "steps": [
+        "In a saucepan, combine the strawberries, sugar, and lemon juice. Cook over medium heat until the volume reduces to 30%.",
+        "Remove from heat and blend. Chill in the fridge."
+      ]
+    },
+    {
+      "title": "Strawberry Frozen Yogurt Base",
+      "ingredients": ["strawberry concentrate", "500 g plain whole milk yogurt", "100 g sugar", "pinch of salt", "1 tsp vanilla extract", "2 tsp honey"],
+      "steps": [
+        "Combine all the ingredients in a bowl and whisk until the sugar is dissolved.",
+        "Chill in the fridge for at least 4 hours before churning."
+      ]
+    },
+    {
+      "title": "Assembly",
+      "steps": [
+        "Churn in an ice cream maker until it reaches a soft-serve consistency.",
+        "Freeze overnight."
+      ]
+    }
+  ]
+}

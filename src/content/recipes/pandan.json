@@ -1,0 +1,35 @@
+{
+  "id": "low_cal_pandan",
+  "emoji": "🍃",
+  "name": "Low Calorie Pandan Ice Cream",
+  "desc": "A low calorie version of pandan ice cream with no compromise on flavor and texture.",
+  "time": "30 min active · overnight chilling",
+  "serves": "Makes 3 pints",
+  "tags": ["Low calorie", "Blender required"],
+  "note": "147 calories per 1/2 cup serving (or 587 calories for one pint)!",
+  "ingredients": [
+    "1 tsp cornstarch",
+    "3.5 cups whole milk",
+    "1/2 cup heavy cream",
+    "1/3 cup sugar",
+    "1 cup allulose",
+    "7 tbsp nonfat dry milk powder",
+    "pinch of salt",
+    "6 egg yolks",
+    "1 tsp vanilla extract",
+    "4 tsp pandan extract",
+    "4 oz reduced-fat cream cheese"
+  ],
+  "steps": [
+    "Whisk together the cornstarch with 2 tbsp of the whole milk until smooth. Set aside.",
+    "Simmer the whole milk, heavy cream, and dry milk powder in a saucepan until the mixture is hot (but not boiling). I aim for around 150°F.",
+    "In a separate bowl, whisk the egg yolks with the sugar, allulose, and salt. Slowly pour some of the hot cream mixture into the yolks while whisking to temper them.",
+    "Pour the tempered yolks back into the saucepan and add the cornstarch slurry. Cook over medium heat, stirring constantly, until the custard thickens (about 170°F).",
+    "Stir in the vanilla extract and pandan extract.",
+    "Remove from heat and strain through a fine-mesh sieve.",
+    "Add the reduced-fat cream cheese to the custard and blend until smooth.",
+    "Chill in the refrigerator for at least 4 hours.",
+    "Churn in an ice cream maker until it reaches soft-serve consistency.",
+    "Transfer to containers and freeze overnight."
+  ]
+}

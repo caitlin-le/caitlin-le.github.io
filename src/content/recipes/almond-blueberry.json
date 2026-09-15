@@ -1,0 +1,43 @@
+{
+  "id": "almond_blueberry_jam",
+  "emoji": "🥜🫐",
+  "name": "Almond Ice Cream with Blueberry Jam",
+  "desc": "A creamy almond ice cream swirled with sweet and tangy blueberry jam.",
+  "time": "2 hr active · overnight chilling",
+  "serves": "Makes 2 pints",
+  "tags": ["Nutty", "Fruity"],
+  "image": "/assets/ice cream/almond with blueberry jam.png",
+  "sections": [
+    {
+      "title": "Blueberry Jam",
+      "ingredients": ["300 g fresh blueberries", "140 g sugar", "1 tbsp lemon juice"],
+      "steps": [
+        "Let the blueberries macerate with the sugar for 30 minutes to an hour.",
+        "Simmer the blueberries, sugar, and lemon juice in a saucepan over medium heat until the mixture thickens (about 15-20 minutes).",
+        "It's ready when you put a drop of the mixture on a cold plate and it holds its shape.",
+        "Remove from heat and let cool completely before using."
+      ]
+    },
+    {
+      "title": "Almond Ice Cream Base",
+      "ingredients": ["2.5 cups heavy cream", "1/2 cup whole milk", "100 g brown sugar", "40 g sugar", "pinch of salt", "6 egg yolks", "1 tsp vanilla extract", "1 tsp almond extract"],
+      "steps": [
+        "Simmer the heavy cream, whole milk, sugar, and salt until the sugar is dissolved and the mixture is hot (but not boiling). I aim for around 150°F.",
+        "In a separate bowl, whisk the egg yolks. Slowly pour some of the hot cream mixture into the yolks while whisking to temper them.",
+        "Pour the tempered yolks back into the saucepan. Cook over medium heat, stirring constantly, until the custard thickens (about 170°F).",
+        "Stir in the vanilla extract and almond extract.",
+        "Remove from heat and strain through a fine-mesh sieve.",
+        "Chill in the refrigerator for at least 4 hours."
+      ]
+    },
+    {
+      "title": "Assembly",
+      "ingredients": ["Almond ice cream base", "Blueberry jam"],
+      "steps": [
+        "Churn the almond ice cream base in an ice cream maker until it reaches a soft-serve consistency.",
+        "Layer the ice cream and swirl in the blueberry jam in a container. The jam is sweet, so I did about a spoon full in each layer of a pint container.",
+        "Freeze the assembled ice cream overnight."
+      ]
+    }
+  ]
+}
