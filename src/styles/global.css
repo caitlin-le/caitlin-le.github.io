@@ -373,22 +373,26 @@ p { line-height: 1.65; color: var(--ink-mid); }
   transform: translateY(-3px);
 }
 
-.recipe-img {
+.recipe-img-wrap {
   width: 100%;
   aspect-ratio: 4/3;
-  object-fit: cover;
-  object-position: center;
-  background: var(--surface);
-  display: block;
-}
-.recipe-img-placeholder {
-  width: 100%;
-  aspect-ratio: 4/3;
+  overflow: hidden;
   background: var(--surface);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+.recipe-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.recipe-img-emoji {
   font-size: 3rem;
+  line-height: 1;
 }
 
 .recipe-card-body { padding: 1rem 1.1rem 1.2rem; }

@@ -25,13 +25,13 @@ const recipes = await getCollection('recipes');
           data-recipe-id={recipe.data.id}
           aria-label={`Open recipe for ${recipe.data.name}`}
         >
-          {recipe.data.image ? (
-            <img class="recipe-img" src={recipe.data.image} alt={recipe.data.name} loading="lazy" />
-          ) : (
-            <div class="recipe-img-placeholder">
-              <span>{recipe.data.emoji}</span>
-            </div>
-          )}
+          <div class="recipe-img-wrap">
+            {recipe.data.image ? (
+              <img src={recipe.data.image} alt={recipe.data.name} loading="lazy" />
+            ) : (
+              <span class="recipe-img-emoji">{recipe.data.emoji}</span>
+            )}
+          </div>
           <div class="recipe-card-body">
             <div class="recipe-card-name">{recipe.data.emoji} {recipe.data.name}</div>
             <div class="recipe-card-desc">{recipe.data.desc}</div>
