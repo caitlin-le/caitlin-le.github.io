@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
-import headshot from '../../assets/headshot_sept2026.jpg';
+import headshot from '../assets/headshot_sept2026.jpg';
 
 const papers = (await getCollection('papers')).sort((a, b) => {
   const order = { J: 0, C: 1 };
