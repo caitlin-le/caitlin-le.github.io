@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
-import headshot from '../../assets/headshot.jpg';
+import headshot from '../../assets/headshot_sept2026.jpg';
 
 const papers = (await getCollection('papers')).sort((a, b) => {
   const order = { J: 0, C: 1 };
@@ -29,11 +29,11 @@ const featured = papers.filter(p => p.data.video || p.data.thumbnail).slice(0, 2
         <h1>Caitlin Le</h1>
         <p class="hero-sub">
           PhD candidate in the <a href="https://faboratory.princeton.edu" target="_blank" rel="noopener" style="color:var(--navy);font-weight:700;">Faboratory</a> at Princeton.
-          I design soft robots that burrow through granular media — sand, gravel, soil — to understand and engineer locomotion underground.
+          I build soft robots that move through sand and granular materials — studying how they burrow, what stops them, and how to make them go further.
         </p>
         <p class="hero-sub" style="margin-top:0.5rem;font-size:0.82rem;color:var(--muted)">
           Outside the lab: I run a one-person ice cream kitchen.
-          <a href="/icecream" style="color:var(--navy);font-weight:700;">See 13 recipes →</a>
+          <a href="/icecream" style="color:var(--navy);font-weight:700;"> See 13 recipes →</a>
         </p>
         <div class="hero-btns">
           <a href="/research" class="btn btn-navy">View research</a>
@@ -92,7 +92,6 @@ const featured = papers.filter(p => p.data.video || p.data.thumbnail).slice(0, 2
           </div>
           <div class="paper-body">
             <div class="paper-meta">
-              <span class="paper-id">{paper.data.id}</span>
               <span class="paper-venue">{paper.data.venue} · {paper.data.year}</span>
             </div>
             <h3 class="paper-title">{paper.data.title}</h3>
@@ -109,7 +108,6 @@ const featured = papers.filter(p => p.data.video || p.data.thumbnail).slice(0, 2
     <div class="pub-list">
       {papers.map(paper => (
         <div class="pub-item">
-          <span class="pub-item-id">{paper.data.id}</span>
           <div class="pub-item-text">
             <strong>{paper.data.title}</strong>
             {' '}— <a href={paper.data.url} target="_blank" rel="noopener">{paper.data.venue}</a>, {paper.data.year}
@@ -142,58 +140,51 @@ const featured = papers.filter(p => p.data.video || p.data.thumbnail).slice(0, 2
           <div style="background:color-mix(in srgb,var(--white) 10%,transparent);border:1px solid color-mix(in srgb,var(--white) 20%,transparent);border-radius:var(--radius);padding:1rem 1.25rem">
             <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:color-mix(in srgb,var(--white) 55%,transparent);margin-bottom:0.35rem">Summer 2024</div>
             <div style="font-weight:700;color:var(--white);font-size:0.9rem">Glenn Research Center Residency #1</div>
-            <div style="font-size:0.78rem;color:color-mix(in srgb,var(--white) 65%,transparent);margin-top:0.2rem">In situ resource utilization · Regolith mechanics</div>
+            <div style="font-size:0.78rem;color:color-mix(in srgb,var(--white) 65%,transparent);margin-top:0.2rem">Used the TREC rig to test the effects of intruder moduli on intrusion forces</div>
           </div>
           <div style="background:color-mix(in srgb,var(--white) 10%,transparent);border:1px solid color-mix(in srgb,var(--white) 20%,transparent);border-radius:var(--radius);padding:1rem 1.25rem">
             <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:color-mix(in srgb,var(--white) 55%,transparent);margin-bottom:0.35rem">Summer 2025</div>
             <div style="font-weight:700;color:var(--white);font-size:0.9rem">Glenn Research Center Residency #2</div>
-            <div style="font-size:0.78rem;color:color-mix(in srgb,var(--white) 65%,transparent);margin-top:0.2rem">Burrowing locomotion · Planetary simulants</div>
+            <div style="font-size:0.78rem;color:color-mix(in srgb,var(--white) 65%,transparent);margin-top:0.2rem">Characterized the Excavation rig and tested intruder moduli effects on intrusion forces</div>
           </div>
         </div>
       </div>
       <div>
         <div class="photo-grid">
           <img src="/assets/VTE glenn respirator.jpg" alt="Caitlin Le at NASA Glenn Research Center" loading="lazy" />
-          <img src="/assets/VTE glenn excavation sample.jpg" alt="Excavation sample at NASA Glenn" loading="lazy" style="transform: rotate(90deg); transform-origin: center; object-position: center;" />
+          <img src="/assets/VTE glenn excavation sample.jpg" alt="Excavation sample at NASA Glenn" loading="lazy"" />
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── About / CV ─────────────────────────────────── -->
-<section class="section-pad stripe-navy" style="padding-top:0;background:var(--navy)">
-  <div class="page-wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem">
-    <div>
-      <p class="eyebrow" style="margin-bottom:0.75rem;color:color-mix(in srgb,var(--white) 55%,transparent)">About</p>
-      <h2 style="margin-bottom:0.75rem">Background</h2>
-      <p style="color:color-mix(in srgb,var(--white) 75%,transparent);margin-bottom:1.5rem">
-        I'm a roboticist, cook, and occasional trail runner. Before Princeton I studied mechanical engineering, and I've spent time in Vietnam doing fieldwork on construction sites — which turns out to share a lot of physics with granular robotics.
-      </p>
-      <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
-        <a href="/about" class="btn" style="background:color-mix(in srgb,var(--white) 15%,transparent);color:var(--white);border:1px solid color-mix(in srgb,var(--white) 30%,transparent)">More about me</a>
-        <a href="/cv.pdf" class="btn" style="background:color-mix(in srgb,var(--white) 15%,transparent);color:var(--white);border:1px solid color-mix(in srgb,var(--white) 30%,transparent)" target="_blank">Download CV</a>
+<!-- ── CV Highlights ───────────────────────────────── -->
+<section class="section-pad" style="background:var(--surface)">
+  <div class="page-wrap">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:0.75rem">
+      <p class="eyebrow">Highlights</p>
+      <div style="display:flex;gap:0.75rem">
+        <a href="/about" class="btn btn-navy" style="font-size:0.78rem;padding:0.45rem 1rem">More about me</a>
+        <a href="/cv.pdf" class="btn btn-outline" style="font-size:0.78rem;padding:0.45rem 1rem" target="_blank">Download CV</a>
       </div>
     </div>
-    <div>
-      <p class="eyebrow" style="margin-bottom:1rem;color:color-mix(in srgb,var(--white) 55%,transparent)">Highlights</p>
-      <div>
-        <div class="cv-row">
-          <span class="cv-year">2022–</span>
-          <span class="cv-text">PhD Candidate, Mechanical & Aerospace Engineering, Princeton University</span>
-        </div>
-        <div class="cv-row">
-          <span class="cv-year">2024</span>
-          <span class="cv-text">NASA NSTGRO Fellow</span>
-        </div>
-        <div class="cv-row">
-          <span class="cv-year">2024–25</span>
-          <span class="cv-text">NASA Glenn Research Center Residency (×2)</span>
-        </div>
-        <div class="cv-row">
-          <span class="cv-year">2022</span>
-          <span class="cv-text">BS Mechanical Engineering, [Undergraduate Institution]</span>
-        </div>
+    <div style="max-width:640px">
+      <div class="cv-row-light">
+        <span class="cv-year-light">2022–</span>
+        <span class="cv-text-light">PhD Candidate, Mechanical & Aerospace Engineering, Princeton University</span>
+      </div>
+      <div class="cv-row-light">
+        <span class="cv-year-light">2024–25</span>
+        <span class="cv-text-light">NASA Glenn Research Center Residency (×2)</span>
+      </div>
+      <div class="cv-row-light">
+        <span class="cv-year-light">2026</span>
+        <span class="cv-text-light">MS Mechanical Engineering & Materials Science, Yale University</span>
+      </div>
+      <div class="cv-row-light">
+        <span class="cv-year-light">2022</span>
+        <span class="cv-text-light">BS Mechanical Engineering, UC San Diego</span>
       </div>
     </div>
   </div>
@@ -205,7 +196,7 @@ const featured = papers.filter(p => p.data.video || p.data.thumbnail).slice(0, 2
     <p class="eyebrow" style="margin-bottom:0.5rem;text-align:center">Get in touch</p>
     <h2 style="text-align:center;margin-bottom:2rem">Contact</h2>
     <div class="contact-grid">
-      <a href="mailto:cl6244@princeton.edu" class="contact-card">
+      <a href="mailto:caitlin.le@princeton.edu" class="contact-card">
         <div class="contact-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
@@ -235,9 +226,9 @@ const featured = papers.filter(p => p.data.video || p.data.thumbnail).slice(0, 2
 <style>
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 1fr 240px;
   gap: 3rem;
-  align-items: start;
+  align-items: center;
 }
 .hero-text { padding-top: 1rem; }
 .hero-sub {

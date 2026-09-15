@@ -377,7 +377,9 @@ p { line-height: 1.65; color: var(--ink-mid); }
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
+  object-position: center;
   background: var(--surface);
+  display: block;
 }
 .recipe-img-placeholder {
   width: 100%;
@@ -640,6 +642,28 @@ p { line-height: 1.65; color: var(--ink-mid); }
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--white);
+  line-height: 1.4;
+}
+
+/* ── CV rows (light background variant) ──────────── */
+.cv-row-light {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.cv-row-light:last-child { border-bottom: none; }
+.cv-year-light {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--navy);
+  min-width: 3rem;
+}
+.cv-text-light {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-mid);
   line-height: 1.4;
 }
 

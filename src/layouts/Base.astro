@@ -88,8 +88,7 @@ const fullTitle = title === 'Caitlin Le' ? title : `${title} · Caitlin Le`;
   }
 
   const stored = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(stored ? stored === 'dark' : prefersDark);
+  applyTheme(stored === 'dark');
 
   btn?.addEventListener('click', () => {
     const isDark = root.getAttribute('data-theme') === 'dark';
