@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://clle37.github.io',
+  site: 'https://caitlin-le.github.io',
   integrations: [sitemap()],
   image: {
     domains: [],
