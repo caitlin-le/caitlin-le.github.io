@@ -5,6 +5,7 @@
   "year": 2026,
   "url": "https://ieeexplore.ieee.org/document/11522833",
   "video": "/assets/paper thumbnails/robosoft 2026 short for website.mp4",
+  "poster": "/assets/paper thumbnails/poster-c2.svg",
   "authors": "Caitlin Le, et al.",
   "abstract": "A framework for standardizing granular media characterization to enable reproducible burrowing robot benchmarks.",
   "tags": ["granular media", "benchmarking", "burrowing"]

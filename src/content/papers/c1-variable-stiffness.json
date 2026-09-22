@@ -5,6 +5,7 @@
   "year": 2025,
   "url": "https://ieeexplore.ieee.org/abstract/document/11020817",
   "video": "/assets/paper thumbnails/VS2 video short for website.mp4",
+  "poster": "/assets/paper thumbnails/poster-c1.svg",
   "authors": "Caitlin Le, et al.",
   "abstract": "Granular metamaterials with independently tunable stiffness and particle size for reconfigurable robotic structures.",
   "tags": ["metamaterials", "granular", "variable stiffness"]

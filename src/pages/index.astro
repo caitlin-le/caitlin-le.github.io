@@ -83,7 +83,7 @@ const featured = papers.filter(p => p.data.video || p.data.thumbnail).slice(0, 2
         <article class="paper-card">
           <div class="paper-visual">
             {paper.data.video ? (
-              <video autoplay muted loop playsinline>
+              <video muted loop playsinline preload="none" poster={paper.data.poster || paper.data.thumbnail} class="paper-video">
                 <source src={paper.data.video} type="video/mp4" />
               </video>
             ) : paper.data.thumbnail ? (

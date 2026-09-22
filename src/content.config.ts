@@ -11,6 +11,7 @@ const papers = defineCollection({
     url: z.string().url(),
     thumbnail: z.string().optional(),
     video: z.string().optional(),
+    poster: z.string().optional(),
     authors: z.string(),
     abstract: z.string().optional(),
     tags: z.array(z.string()).optional(),

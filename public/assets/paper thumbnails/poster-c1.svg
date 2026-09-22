@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#1C3557"/>
+  <!-- subtle dot pattern -->
+  <g fill="#ffffff" fill-opacity="0.06">
+    <circle cx="80" cy="60" r="2"/><circle cx="160" cy="60" r="2"/><circle cx="240" cy="60" r="2"/><circle cx="320" cy="60" r="2"/>
+    <circle cx="80" cy="120" r="2"/><circle cx="160" cy="120" r="2"/><circle cx="240" cy="120" r="2"/><circle cx="320" cy="120" r="2"/>
+    <circle cx="80" cy="180" r="2"/><circle cx="160" cy="180" r="2"/><circle cx="240" cy="180" r="2"/><circle cx="320" cy="180" r="2"/>
+    <circle cx="80" cy="240" r="2"/><circle cx="160" cy="240" r="2"/><circle cx="240" cy="240" r="2"/><circle cx="320" cy="240" r="2"/>
+  </g>
+  <!-- accent stripe -->
+  <rect x="0" y="0" width="6" height="300" fill="#894022"/>
+  <!-- venue badge -->
+  <rect x="32" y="32" width="148" height="22" rx="4" fill="#ffffff" fill-opacity="0.12"/>
+  <text x="40" y="47" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#ffffff" fill-opacity="0.75" letter-spacing="1">IEEE ROBOSOFT 2025</text>
+  <!-- title -->
+  <text x="32" y="102" font-family="system-ui,sans-serif" font-size="18" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Variable Stiffness</text>
+  <text x="32" y="124" font-family="system-ui,sans-serif" font-size="18" font-weight="800" fill="#ffffff" letter-spacing="-0.5">&amp; Variable Size Particles</text>
+  <text x="32" y="150" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#ffffff" fill-opacity="0.75">for Reconfigurable Granular</text>
+  <text x="32" y="168" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#ffffff" fill-opacity="0.75">Metamaterials</text>
+  <!-- divider -->
+  <line x1="32" y1="190" x2="180" y2="190" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- play icon -->
+  <circle cx="340" cy="240" r="28" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.5"/>
+  <polygon points="332,230 332,250 356,240" fill="#ffffff" fill-opacity="0.85"/>
+  <!-- author -->
+  <text x="32" y="214" font-family="system-ui,sans-serif" font-size="11" fill="#ffffff" fill-opacity="0.55">Caitlin Le, et al.</text>
+</svg>

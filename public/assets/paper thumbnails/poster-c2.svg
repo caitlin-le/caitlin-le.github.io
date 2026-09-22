@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#1C3557"/>
+  <!-- subtle grid pattern -->
+  <g stroke="#ffffff" stroke-width="0.4" opacity="0.07">
+    <line x1="0" y1="60" x2="400" y2="60"/>
+    <line x1="0" y1="120" x2="400" y2="120"/>
+    <line x1="0" y1="180" x2="400" y2="180"/>
+    <line x1="0" y1="240" x2="400" y2="240"/>
+    <line x1="80" y1="0" x2="80" y2="300"/>
+    <line x1="160" y1="0" x2="160" y2="300"/>
+    <line x1="240" y1="0" x2="240" y2="300"/>
+    <line x1="320" y1="0" x2="320" y2="300"/>
+  </g>
+  <!-- venue badge -->
+  <rect x="32" y="32" width="148" height="22" rx="4" fill="#ffffff" fill-opacity="0.12"/>
+  <text x="40" y="47" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#ffffff" fill-opacity="0.75" letter-spacing="1">IEEE ROBOSOFT 2026</text>
+  <!-- title -->
+  <text x="32" y="102" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Common Ground:</text>
+  <text x="32" y="128" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#ffffff" fill-opacity="0.8">Standardizing Granular Media</text>
+  <text x="32" y="148" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#ffffff" fill-opacity="0.8">Characteristics for Burrowing Robots</text>
+  <!-- divider -->
+  <line x1="32" y1="178" x2="180" y2="178" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- play icon -->
+  <circle cx="340" cy="240" r="28" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.5"/>
+  <polygon points="332,230 332,250 356,240" fill="#ffffff" fill-opacity="0.85"/>
+  <!-- author -->
+  <text x="32" y="202" font-family="system-ui,sans-serif" font-size="11" fill="#ffffff" fill-opacity="0.55">Caitlin Le, et al.</text>
+</svg>
